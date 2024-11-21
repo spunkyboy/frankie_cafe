@@ -1,0 +1,450 @@
+body{
+  p{
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    text-transform: capitalize;
+  }
+}
+.main_grid{
+  display : grid;
+  gap : 1rem;
+
+}
+.body-center{
+  margin-inline:auto;
+  max-width: 1200px;
+}
+//header element
+.logo_name_cart {
+  display: grid;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: black;
+  color: white;
+  align-items: center;
+  height: 7rem;
+  padding: 0 1rem;
+}
+.cart__button {
+  grid-column-start: 3;
+  justify-self: end;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+h1 {
+  grid-column: 1 / span 2;
+  justify-self: start;
+  font-weight: 600;
+}
+
+
+.header_nav{
+    h1{
+      color:#FFFFFF;
+      font-size: 1.1rem;
+      // text-transform: uppercase;
+      line-height: 1.2;
+      span{
+        display: block;
+      }
+    }
+
+.nav_drop{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    
+  ul{
+    display: flex;
+    justify-content: center;
+      li{
+        padding: 0rem 1rem;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .fa-cart-shopping{
+    font-size: 1.2rem;
+  }
+
+  img{
+    margin-top: 7rem;
+  }
+span{
+  text-transform: uppercase;
+}
+}
+
+.main_container_cart{
+   grid-column: 2;
+}
+
+.top-coffee-grid{
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto auto;
+  gap:1rem;
+  color: black;
+  padding:0 1rem;
+ 
+  .top-text-price{
+    font-weight: 250;
+    align-self: center;
+    line-height: 1.8;
+    p:nth-child(2){
+     text-transform: none;
+    }
+  }
+  img{
+    max-height: 100vh;
+    transition: max-height 0.20s ease-out;
+  }
+  *p{
+    text-transform: none;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: 300;
+  }
+  span{
+    font-weight: bold;
+    font-style: italic;
+  }
+  .h2-coffee-text{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-weight: 600;
+    margin: 1rem 0rem;
+    font-family: "Poppins", sans-serif;
+
+  }
+  .product-grid{
+    grid-column: 2;
+  }
+  .product {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px 10px;
+    align-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;;
+  }
+  .product h3 {
+    font-size: 1.125rem;
+    margin: auto;
+  }
+  .product p {
+    font-size: 1.125rem;
+    margin: auto;
+  }
+  
+  .product button {
+    border: none;
+    background-color:rgb(138, 137, 137);
+    color: #FFFFFF;
+    border-radius: 0.3rem;
+    padding: 0.6rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin: auto;
+  }
+  #proceed-btn{
+    background-color:rgb(16, 15, 15);
+    margin-inline: auto;
+    align-self: center;
+    color: #FFFFFF;
+    width: 20rem;
+    height: 4rem;
+  }
+  .cart-item button {
+    background-color: gray;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  .cart-item {
+    display: grid;
+    grid-template-columns: 9rem auto;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding:1rem;
+    button{
+      background-color:rgb(14, 14, 14); 
+    }
+    p{
+      text-align: center;
+      padding: 1rem 0rem;
+    }
+  }
+ #cart-items{
+  h3{
+    margin: 2rem 0rem;
+    font-weight: bold;
+    padding-right: 1rem;
+    font-size: 1.4rem;
+    text-align: right;
+   
+  }
+ }
+
+  #user-info-form{
+    grid-row: 4;
+    line-height: 2;
+    font-size: 1.2rem;
+    background-color: rgba(128, 128, 128, 0.316);
+    width: 100%;
+    button{
+      background-color:rgb(12, 12, 12); 
+      color:rgb(247, 247, 247); 
+      padding: 1rem;  
+      text-transform: uppercase;
+    }
+    h2{
+      text-transform: uppercase;
+      font-size: 1/7rem;
+      text-align: center;
+      padding: 1.5rem 0rem;
+    }
+  }
+ 
+  //enter information input styles.
+#userForm{
+  display: grid;
+  padding: 0rem 2rem;
+  .filled-input{
+    padding: 1rem 3rem;
+  }
+  label{
+    font-weight: bold;
+    font-size: 1.2rem;
+    
+  }
+}
+
+.modal {
+  margin-inline: auto;
+  display: none; 
+  position: fixed; 
+  z-index: 10; 
+  top:0px;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: rgba(0, 0, 0, 0.4); /* Black background with transparency */
+
+}
+
+/* Modal Content */
+.modal-content-product{
+overflow-y: auto;
+position:fixed;
+display: grid;
+gap: 2rem;
+grid-template-columns: 1fr;
+grid-template-rows: auto auto auto;
+background-color: #ffffff;
+padding: 4rem;
+width: 90%;
+height: 80vh;
+margin: auto;   
+left: 0;
+right:0;
+top: 50%; 
+-webkit-transform:translateY(-50%);
+-moz-transform:translateY(-50%);
+-ms-transform:translateY(-50%);
+-o-transform:translateY(-50%);
+transform: translateY(-50%);  
+h2{
+  color:rgb(242, 240, 240);    
+  align-self: center;
+  justify-self: center;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  font-weight: 600;
+} 
+img{
+    filter: contrast(0.6);
+}   
+}
+
+/* Close Button */
+.close {
+margin: auto;
+color: rgb(114, 114, 114);
+font-size: 1.5rem;
+font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+color: rgb(16, 16, 16);
+text-decoration: none;
+cursor: pointer;
+  }
+}
+
+.coffee-bottom{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  background-color:rgb(19, 18, 18);
+  color:rgb(237, 230, 230);
+  font-weight: 200;
+  font-size: 1rem;
+  justify-content: center;
+  align-content: center;
+  height: 20rem;
+  line-height: 1.7;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  gap: 2rem;
+    ul{
+      li:nth-child(1){
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 0.3rem;
+        margin-bottom: 1rem;
+      }
+    }
+}
+
+@media only screen and (max-width: 732px){
+  .logo_name_cart{
+   h1{
+    font-size: 1.3rem;
+   }
+  }
+//top coffee display block and changes
+  .top-coffee-grid{
+    display: block;
+    text-align: center;
+    img{
+      margin-bottom: 2rem;
+    }
+    
+    /* Modal Content */
+    .modal-content-product{
+      justify-content: center;
+      overflow-x: hidden;
+    }
+  }
+}
+
+@media only screen and (max-width: 632px){
+  .coffee-bottom{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    background-color:rgb(10, 10, 10);
+    color:rgb(245, 240, 240);
+    font-weight: 200;
+    font-size: 1rem;
+    justify-items: center;
+    height: 20rem;
+    line-height: 1.7;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  
+  }
+  ul{
+    li:nth-child(1){
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 0.3rem;
+      margin-bottom: 1rem;
+    }
+  }
+ address{
+  font-style: italic;
+  margin-top: 2rem;
+  grid-column: 1 / span 2;
+  text-align: center;
+ }
+  .logo_name_cart{
+    button{
+      font-size: 1rem;
+    }
+  }
+}
+@media only screen and (max-width: 450px){
+  .coffee-bottom{
+    height: 35rem;
+    display: block;
+    text-align: center;
+  }
+  .first_list_shop{
+    margin-top: 2rem;
+  }
+  .top-coffee-grid{
+    display: block;
+    text-align: center;
+    img{
+      margin-bottom: 2rem;
+    }
+  }
+  .logo_name_cart{
+    button{
+      font-size: 0.9rem;
+    }
+    #cart-button{
+     font-size: 0.8rem;
+    }
+  }
+  
+}
+
+//cart modal items in busket
+
+
+@media only screen and (max-width: 733px){
+ .top-coffee-grid{
+  text-align: center;
+  .cart-item {
+    display: grid;
+    grid-template-columns: 10rem;
+    justify-content: center;
+    button{
+      width: 5rem;
+      margin: 0.4rem auto;
+      background-color:black; 
+    }
+ }
+ /* Close Button */
+.close {
+  display: none;
+  color: rgb(110, 109, 109);
+  font-size: 1.5rem;
+  font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+  color: rgb(11, 11, 11);
+  text-decoration: none;
+  cursor: pointer;
+  }
+}
+.header_nav{
+  figure{
+    img{
+      height: 30rem;
+    }
+  }
+}
+
+}
+

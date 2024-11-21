@@ -1,0 +1,311 @@
+//style for coffee at home and all coffee products
+html{
+    font-size: 16px;
+}
+
+body{
+    img{
+        object-fit:cover;
+        object-position: center;
+        width: 100%;   
+    }
+}
+.coffee_home_grid{
+    max-width: 1200px;
+    margin-inline: auto;
+    margin-top: 6.4rem;
+}
+.all-top{
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap: 3rem;
+    margin: 3rem 0rem;
+}
+
+.top_one{
+  
+    h2{
+        font-family: "Open Sans", sans-serif;
+        text-transform: capitalize;
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 2rem 1rem;
+    }
+    p{
+        font-family: "Open Sans", sans-serif;
+        line-height: 2;
+        font-size: 1rem;
+        margin: 0rem 1rem;
+    }
+    .freeDelivery{
+        text-align: center;
+        background-color: #05C9FF;
+        color: #0A0A0A;
+        font-weight: 400;
+        padding: 1rem 0rem;
+        margin-top: 1.5rem;
+      }
+ 
+  img {
+    height:50vh;
+}
+}
+.top_one_1{
+     img{
+        height: 50vh;
+     }
+ .top-text-home{
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 2.5rem 1rem;
+    color: #141414;
+    background-color:#DBDBDB;
+    font-size: 1.3rem;
+    margin-top: -0.4rem;
+}
+
+.top-text-home:hover{
+    background-color: #141414;
+    color:#DBDBDB;
+}
+
+}
+//style for all coffee products  desktop
+#box1{
+    max-width: 1200px;
+    margin-inline: auto;
+}
+.product_banner_buttons{
+    display: grid;
+    gap: 1.5rem;
+
+    h2,
+    h3{
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-left: 1rem;
+        font-size: 1.2rem;
+        color: #141414;;
+    }
+  
+}
+
+
+.products_stage_Btn{
+    display: flex;
+    justify-content: space-between;
+     padding: 1.5rem 1rem;
+     box-shadow: 1px 1px 5px 1px rgb(23, 22, 22);
+
+     &:focus{
+        background-color: #141414;
+        color:#DBDBDB;
+        padding: 0.4rem;
+        outline: none;  
+    }
+    a{
+        cursor: pointer;
+        font-family: "Open Sans", sans-serif;
+        text-transform: uppercase;
+        color:#444343;
+        border: none;
+        border-radius: 0.4rem;
+        padding: 0.4rem;
+        transition: background-color 0.3s, color 0.3s;  /* Smooth transition for hover/focus */
+
+    }
+    a:hover, a:focus {
+        background-color: #141414;
+        color: #DBDBDB;
+        padding: 0.4rem;  /* Keep padding consistent */
+      }
+   
+   
+}
+.grid-for-all-products{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin: 3rem 0rem;
+}
+.atProducts{
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    padding: 1rem 0rem;
+    line-height: 1.2;
+}
+.products_stage{
+
+    p{
+        text-transform: uppercase;
+        font-size: 0.8rem;
+    }
+   .price_lab{
+     font-weight: 600;
+    }
+   }
+//style for all coffee products tablets and desktop
+@media (max-width: 1000px) {
+    .product_banner_buttons{
+        display: grid;
+        gap: 1.5rem;
+    }
+    .products_stage_Btn{
+        display: flex;
+        justify-content: space-between;
+        a{
+            font-family: "Open Sans", sans-serif;
+            text-transform: uppercase;
+        }
+    }
+    .grid-for-all-products{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+        margin: 3rem 0rem;
+    }
+    .atProducts{
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        padding: 1rem 0rem;
+        line-height: 1.2;
+    }
+    .products_stage{
+    
+        p{
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+       .price_lab{
+         font-weight: 600;
+        }
+       }
+
+}
+//ends
+//style for all coffee products mobile and tablets
+@media (max-width: 850px) {
+    .products_stage_Btn{
+       
+        display: grid;
+        grid-template-columns: auto;
+        gap: 1.4rem;
+        justify-content: center;
+       
+        a{
+           
+            font-family: "Open Sans", sans-serif;
+            text-transform: uppercase;
+        }
+    }
+    .grid-for-all-products{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+    .atProducts{
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        padding: 1rem 0rem;
+    }
+    .products_stage{
+    
+        p{
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+       .price_lab{
+         font-weight: 600;
+        }
+       }
+
+}
+//ends
+
+
+@media (max-width: 600px) {
+    .all-top{
+        display: grid;
+        grid-template-columns:auto;
+        gap: 3rem;
+    }
+    
+.coffee_home_grid{
+    display: grid;
+    grid-template-columns: auto;
+    gap: 3rem;
+    margin-top: 6.4rem;
+}
+
+
+.top_one{
+  
+    h1{
+        font-family: "Open Sans", sans-serif;
+        text-transform: capitalize;
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 2rem 1rem;
+    }
+    p{
+        font-family: "Open Sans", sans-serif;
+        line-height: 2;
+        font-size: 1rem;
+        margin: 0rem 1rem;
+    }
+  .freeDelivery{
+    text-align: center;
+    font-weight: 400;
+    padding: 1rem 0rem;
+    margin-top: 1.5rem;
+  }
+  img {
+    height:50vh;
+}
+}
+.top_one_1{
+   
+    img{
+        height: 40vh;
+    }
+    .top-text-home{
+        font-family: "Open Sans", sans-serif;
+        text-transform: uppercase;
+        text-align: left;
+        padding: 2rem;
+        color: #141414;
+        background-color:#DBDBDB;
+        font-size: 1.3rem;
+    }
+}
+.last-top{
+    margin-bottom: 3rem;
+}
+
+//style for all coffee products mobiles
+.grid-for-all-products{
+    display: grid;
+    grid-template-columns: auto;
+    gap: 3rem;
+}
+.atProducts{
+    padding: 1rem 0rem;
+}
+.products_stage{
+
+    p{
+        font-size: 0.8rem;
+        padding-left: 0rem;
+    }
+   .price_lab{
+     font-weight: 600;
+    }
+   }
+  
+
+}
+
