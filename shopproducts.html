@@ -54,7 +54,7 @@
         selectedSection.style.display = 'block';
       }
     }
-  </script>
+     </script>
 </head>
 <body>
     
@@ -63,16 +63,26 @@
     <main>
       <header>
         <nav>
-      
-          <div class="mobile_toggle">
-             <div class="desktop_logo">
-                <a href="index.html">cafe frankie</a>
+          <div class="mobile_toggle  shopproduct_toggle">
+              <div class="desktop_logo">
+                  <a href="index.html">cafe frankie</a>
+              </div>
+               <div class="toggle-basket">
+                  <div>
+                      <a class="click_Icon" aria-label="Toggle navigation">
+                        &#9776;
+                      </a>
+                  </div>
+                  <div class="frankie_cart_basket">
+                    <button id="cart-button" onclick="openCartModal()">
+                      <i class="fa-solid fa-basket-shopping">
+                        <span id="item-count">0</span>
+                      </i>
+                    </button>
+                  </div>
+               </div>
              </div>
-             <div>
-                <a class="click_Icon" aria-label="Toggle navigation">&#9776;</a>
-             </div>
-          </div>
-          <div>
+           <div>
           <ul class="nav-list">
             <li>
                <a href="index.html" class="mobile_logo">cafe frankie</a>
@@ -95,27 +105,33 @@
             </li>
               <li><a href="shop.html">shop</a></li>
               <li><a href="contactus.html">Contact</a></li>
+
           </ul>
+        
         </div>
+       
       </nav>
+    
      </header>
     
     
        <div class="coffee_home_grid">
-          <section class="top_one hidden">
-            <figure>
-                <img src="images/coffe_capsule.jpg" alt="coffee_capsules">
-            </figure>
-            <h2> products</h2>
-            <p>We search the globe for the finest coffee, lovingly blend and roast at our Roastery then send directly to you. From farm to bag, from our house to yours.</p>
-            <p class="freeDelivery">FREE DELIVERY ON ORDERS OVER £20</p>
-        </section>
-       <!--section for all Beans & ground products-->
+           <!-- Modal structure loader productsinfo.html for product information and preview-->
+          <div id="myModal_2" class="modal_2">
+            <div class="modal-content_2">
+                <span class="close_2">&times;</span>
+                  <div id="modal-content_2"> 
+                    <div id="contentChange">
+                    </div>
+                  </div>
+            </div>
+          </div>
+        
         <section class="top_one_1 hidden" id="box1">
          
           <div class="product_banner_buttons">
             <figure>
-                <img src="images/coffee_beans.jpg" alt="coffee beans">
+                <img src="images/frankie_capsule.jpg" alt="coffee beans">
             </figure>
             <h2>capsules</h2>
             <div class="products_stage_Btn">
@@ -128,82 +144,155 @@
           </div>
           
           <div class="grid-for-all-products">
+                <div class="products_stage">
+               <!--onclick to load product items from productsinfo.html information-->
+                  <a href="javascript:void(0);" onclick="pricesLoader('signature house')">
+                    <figure>
+                        <img src="images/frankie_capsule.jpg" alt="">
+                    </figure>
+                  </a>
+                  <h2 class="atProducts"> signature house blend</h2>
+                  <p>classico - beans</p>
+                  <p class="price_lab">from £4.25</p>
+                 
+                  <div>
+                  </div>
+                    <div class="product-addBtn">
+                      <div>
+                        <div class="product">
+                          <h2>Product 1</h2>
+                          <p>Price: £4.25</p>
+                          <button 
+                              onclick="addToCart(1, 'Product 1', '<img src=\'images/frankie_capsule.jpg\'>', 4.25)">
+                              Add to Cart
+                        </button>           
+                      </div>
+                      </div>
+                  </div>
+                 
+                  <!--  modal open for cart basket shop page-->
+                  <div id="cart-modal" class="modal">
+                    <div class="modal-content-product">
+                        <span class="close_2" onclick="closeCartModal()">&times;</span>
+                        <h2>Your Cart</h2>
+                        <div id="cart-items">
+                          <p>Your cart is empty.</p>
+                        </div>
+                        <button id="proceed-btn" class="proceed-information" onclick="showUserForm()" style="display: none;">Proceed to Payment</button>
+
+                  </div>
+                  
+                    <div class="form-text-background">
+                   
+                      <div id="user-info-form" style="display: none;" class="form-hidden">
+                        <h2>Enter Your Information</h2>
+                        <form id="userForm" onsubmit="return validateForm()">
+                          <label for="name">Name:</label><br>
+                          <input type="text" id="name" name="name" placeholder="Enter your name" required class="filled-input"><br><br>
+                    
+                          <label for="email">Email:</label><br>
+                          <input type="email" id="email" name="email" placeholder="Enter your email" required class="filled-input"><br><br>
+                    
+                          <label for="address">Address:</label><br>
+                          <input type="text" id="address" name="address" placeholder="Enter your address" required class="filled-input"><br><br>
+    
+                          <label for="postcode">Postcode:</label><br>
+                          <input type="text" id="postcode" name="postcode" placeholder="Postcode" required class="filled-input"> <br><br>
+                          <p id="error"></p>
+                    
+                          <label for="phone">Phone:</label><br>
+                          <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required class="filled-input"><br><br>
+                    
+                          <button type="submit">Submit</button>
+                        </form>
+                      </div>  
+                    </div>         
+                  </div>
+                </div>
+        
+<!--products 2-->
             <div class="products_stage">
-              <figure>
-                  <img src="images/capsule_duplicat.jpg" alt="">
-              </figure>
-              <h2 class="atProducts"> signature house blend</h2>
-              <p>classico - beans</p>
-              <p class="price_lab">from £4.25</p>
-            </div>
-            <div class="products_stage">
-              <figure>
-                <img src="images/capsule_duplicat.jpg" alt="">
-              </figure>
-              <h2 class="atProducts"> single origin</h2>
-              <p>brazil - beans</p>
-              <p class="price_lab">from £4.45</p>
-            </div>
-            <div class="products_stage">
-              <figure>
-                <img src="images/capsule_duplicat.jpg" alt="">
-              </figure>
-              <h2 class="atProducts"> colombia - whole beans</h2>
-              <p class="price_lab">from £4.25</p>
-            </div>
-            <div class="products_stage"> 
-              <figure>
-              <img src="images/capsule_duplicat.jpg" alt="">
-              </figure>
-              <h2 class="atProducts"> special blend</h2>
-              <p class="price_lab">from £4.25</p>
-            </div>
-            <div class="products_stage">
-              <figure>
-              <img src="images/capsule_duplicat.jpg" alt="">
-              </figure>
-              <h2 class="atProducts"> special blend</h2>
-              <p>siena - whole beans</p>
-              <p class="price_lab">from £4.25</p>
-            </div>
-            <div class="products_stage">
+             <!--onclick to load product items from productsinfo.html information-->
+              <a href="javascript:void(0);" onclick="pricesLoader('single origin £4.05')">
                 <figure>
-                <img src="images/capsule_duplicat.jpg" alt="">
+                  <img src="images/frankie_capsule.jpg" alt="">
                 </figure>
+              </a>
+                <h2 class="atProducts"> single origin</h2>
+                <p>brazil - beans</p>
+                <p class="price_lab">from £4.05</p>
+
+                <div class="product-addBtn">
+                  <div>
+                    <div class="product">
+                      <h2>Product 1</h2>
+                      <p>Price: £4.05</p>
+                      <button 
+                          onclick="addToCart(2, 'Product 2', '<img src=\'images/frankie_capsule.jpg\'>', 4.05)">
+                          Add to Cart
+                    </button>           
+                  </div>
+                  </div>
+              </div>
+            </div>
+
+            <div class="products_stage">
+              <a href="javascript:void(0);" onclick="pricesLoader('winter blend - coffee')">
+                <figure>
+                  <img src="images/frankie_capsule.jpg" alt="">
+                </figure>
+              </a>
+                <h2 class="atProducts"> winter blend - coffee</h2>
+                <p class="price_lab">from £4.35</p>
+            </div>
+            <div class="products_stage">
+              <a href="javascript:void(0);" onclick="pricesLoader('coffee capsules - el')">
+                <figure>
+                  <img src="images/frankie_capsule.jpg" alt="">
+                </figure>
+              </a>
+                <h2 class="atProducts"> single origin</h2>
+                <p> coffee capsules - el</p>
+                <p class="price_lab">from £4.25</p>
+            </div>
+            <div class="products_stage">
+              <a href="javascript:void(0);" onclick="pricesLoader('capsules - virtuoso')">
+                <figure>
+                  <img src="images/frankie_capsule.jpg" alt="">
+                </figure>
+              </a>
                 <h2 class="atProducts"> special blend</h2>
-              <p>siena - ground coffee</p>
-              <p class="price_lab">from £4.25</p>
+                <p>coffee capsules - virtuoso</p>
+                <p class="price_lab">from £4.15</p>
              </div>
              <div class="products_stage">
+              <a href="javascript:void(0);" onclick="pricesLoader('capsules - decaffeinated')">
                 <figure>
-                  <img src="images/capsule_duplicat.jpg" alt="">
+                  <img src="images/frankie_capsule.jpg" alt="">
                 </figure>
+              </a>
                 <h2 class="atProducts"> signature house blend</h2>
-              <p>ground coffee - decaffeinated</p>
+                <p>coffee capsules - decaffeinated</p>
+                <p class="price_lab">from £4.50</p>
+           </div>
+           <div class="products_stage">
+            <a href="javascript:void(0);" onclick="pricesLoader( 'capsules - peru')">
+              <figure>
+                <img src="images/frankie_capsule.jpg" alt="">
+              </figure>
+            </a>
+              <h2 class="atProducts"> special blend</h2>
+              <p>coffee capsules - peru</p>
               <p class="price_lab">from £4.25</p>
-              </div>
-              <div class="products_stage">
-                <figure>
-                  <img src="images/capsule_duplicat.jpg" alt="">
-                </figure>
-                <h2 class="atProducts">discovery bundle - whole beans</h2>
-                <p class="price_lab">£19.99</p>
-              </div>
-              <div class="products_stage">
-                <figure>
-                  <img src="images/capsule_duplicat.jpg" alt="">
-                </figure>
-                <h2 class="atProducts"> ground coffee discovery bundle</h2>
-                <p class="price_lab">£19.99</p>
-              </div>
-          </div>
+         </div>
+       </div>
          
         </section>
-   <!--section for all capsules products-->
+   <!--section for all Beans products-->
         <section class="top_one_1 hidden" id="box2" >
           <div class="product_banner_buttons">
             <figure>
-              <img src="images/coffee_capsule.jpg" alt="coffee capsules">
+              <img src="images/frankie_beans.jpg" alt="coffee capsules">
             </figure>
             <h2>beans & ground</h2>
             <div class="products_stage_Btn">
@@ -218,7 +307,7 @@
           <div class="grid-for-all-products">
             <div class="products_stage">
               <figure>
-                  <img src="images/coffee-cup.webp" alt="">
+                <img src="images/frankie_beans.jpg" alt="coffee capsules">
               </figure>
               <h2 class="atProducts"> signature house blend</h2>
               <p>classico - beans</p>
@@ -226,72 +315,53 @@
             </div>
             <div class="products_stage">
               <figure>
-                <img src="images/capsule_duplicat.jpg" alt="">
+                <img src="images/frankie_beans.jpg" alt="coffee capsules">
               </figure>
               <h2 class="atProducts"> single origin</h2>
               <p>brazil - beans</p>
-              <p class="price_lab">from £4.45</p>
+              <p class="price_lab">from £2.45</p>
             </div>
             <div class="products_stage">
               <figure>
-                <img src="images/capsule_duplicat.jpg" alt="">
+                <img src="images/frankie_beans.jpg" alt="coffee capsules">
               </figure>
               <h2 class="atProducts"> colombia - whole beans</h2>
               <p class="price_lab">from £4.25</p>
             </div>
             <div class="products_stage"> 
               <figure>
-              <img src="images/capsule_duplicat.jpg" alt="">
+                <img src="images/frankie_beans.jpg" alt="coffee capsules">
               </figure>
               <h2 class="atProducts"> special blend</h2>
-              <p class="price_lab">from £4.25</p>
+              <p class="price_lab">from £4.15</p>
             </div>
             <div class="products_stage">
               <figure>
-              <img src="images/capsule_duplicat.jpg" alt="">
+                <img src="images/frankie_beans.jpg" alt="coffee capsules">
               </figure>
               <h2 class="atProducts"> special blend</h2>
               <p>siena - whole beans</p>
-              <p class="price_lab">from £4.25</p>
+              <p class="price_lab">from £4.55</p>
             </div>
             <div class="products_stage">
                 <figure>
-                <img src="images/capsule_duplicat.jpg" alt="">
+                  <img src="images/frankie_beans.jpg" alt="coffee capsules">
                 </figure>
                 <h2 class="atProducts"> special blend</h2>
               <p>siena - ground coffee</p>
-              <p class="price_lab">from £4.25</p>
+              <p class="price_lab">from £2.55</p>
              </div>
-             <div class="products_stage">
-                <figure>
-                  <img src="images/capsule_duplicat.jpg" alt="">
-                </figure>
-                <h2 class="atProducts"> signature house blend</h2>
-              <p>ground coffee - decaffeinated</p>
-              <p class="price_lab">from £4.25</p>
-              </div>
-              <div class="products_stage">
-                <figure>
-                  <img src="images/capsule_duplicat.jpg" alt="">
-                </figure>
-                <h2 class="atProducts">discovery bundle - whole beans</h2>
-                <p class="price_lab">£19.99</p>
-              </div>
-              <div class="products_stage">
-                <figure>
-                  <img src="images/capsule_duplicat.jpg" alt="">
-                </figure>
-                <h2 class="atProducts"> ground coffee discovery bundle</h2>
-                <p class="price_lab">£19.99</p>
-              </div>
+
+         
           </div>
+         
          
         </section>
     <!--section for all gift card and cups products-->
         <section class="top_one_1 hidden" id="box3">
           <div class="product_banner_buttons">
             <figure>
-              <img src="images/coffee_gift.jpg" alt="coffee gift">
+              <img src="images/frankie_gifts_ideas.jpg" alt="coffee gift">
             </figure>
             <h3>gift cards and cups</h3>
             <div class="products_stage_Btn">
@@ -306,80 +376,66 @@
            <div class="grid-for-all-products">
             <div class="products_stage">
               <figure>
-                  <img src="images/capsule_duplicat.jpg" alt="">
+                <img src="images/frankie_gift_cups.jpg" alt="coffee gift">
               </figure>
               <h2 class="atProducts"> signature house blend</h2>
               <p>classico - beans</p>
-              <p class="price_lab">from £4.25</p>
+              <p class="price_lab">from £4.65</p>
             </div>
             <div class="products_stage">
               <figure>
-                <img src="images/capsule_duplicat.jpg" alt="">
+                <img src="images/frankie_gift_cups.jpg" alt="coffee gift">
               </figure>
               <h2 class="atProducts"> single origin</h2>
               <p>brazil - beans</p>
-              <p class="price_lab">from £4.45</p>
+              <p class="price_lab">from £2.40</p>
             </div>
             <div class="products_stage">
               <figure>
-                <img src="images/capsule_duplicat.jpg" alt="">
+                <img src="images/frankie_gift_cups.jpg" alt="coffee gift">
               </figure>
               <h2 class="atProducts"> colombia - whole beans</h2>
               <p class="price_lab">from £4.25</p>
             </div>
             <div class="products_stage"> 
               <figure>
-              <img src="images/capsule_duplicat.jpg" alt="">
+                <img src="images/frankie_gift_cups.jpg" alt="coffee gift">
               </figure>
               <h2 class="atProducts"> special blend</h2>
               <p class="price_lab">from £4.25</p>
             </div>
             <div class="products_stage">
               <figure>
-              <img src="images/capsule_duplicat.jpg" alt="">
+                <img src="images/frankie_gift_cups.jpg" alt="coffee gift">
               </figure>
               <h2 class="atProducts"> special blend</h2>
               <p>siena - whole beans</p>
-              <p class="price_lab">from £4.25</p>
+              <p class="price_lab">from £3.25</p>
             </div>
             <div class="products_stage">
                 <figure>
-                <img src="images/capsule_duplicat.jpg" alt="">
+                  <img src="images/frankie_gift_cups.jpg" alt="coffee gift">
                 </figure>
                 <h2 class="atProducts"> special blend</h2>
               <p>siena - ground coffee</p>
-              <p class="price_lab">from £4.25</p>
+              <p class="price_lab">from £1.25</p>
              </div>
              <div class="products_stage">
-                <figure>
-                  <img src="images/capsule_duplicat.jpg" alt="">
-                </figure>
-                <h2 class="atProducts"> signature house blend</h2>
-              <p>ground coffee - decaffeinated</p>
-              <p class="price_lab">from £4.25</p>
-              </div>
-              <div class="products_stage">
-                <figure>
-                  <img src="images/capsule_duplicat.jpg" alt="">
-                </figure>
-                <h2 class="atProducts">discovery bundle - whole beans</h2>
-                <p class="price_lab">£19.99</p>
-              </div>
-              <div class="products_stage">
-                <figure>
-                  <img src="images/capsule_duplicat.jpg" alt="">
-                </figure>
-                <h2 class="atProducts"> ground coffee discovery bundle</h2>
-                <p class="price_lab">£19.99</p>
-              </div>
+              <figure>
+                <img src="images/frankie_gift_cups.jpg" alt="coffee gift">
+              </figure>
+              <h2 class="atProducts"> special blend</h2>
+            <p>siena - ground coffee</p>
+            <p class="price_lab">from £1.25</p>
+           </div>
+         
           </div>
-
         </section>
-   <!--section for all gift ideas and cups products-->
+   <!--section for all gift ideas-->
         <section class="top_one_1 hidden" id="box4">
           <div class="product_banner_buttons">
             <figure>
-              <img src="images/gift_ideas.jpg" alt="gift ideas">
+              <img src="images/frankie_gifts_ideas.jpg" alt="gift ideas">
             </figure>
             <h3> gift ideas</h3>
             <div class="products_stage_Btn">
@@ -394,7 +450,7 @@
             <div class="grid-for-all-products">
               <div class="products_stage">
                 <figure>
-                    <img src="images/capsule_duplicat.jpg" alt="">
+                  <img src="images/frankie_gifts_ideas.jpg" alt="gift ideas">
                 </figure>
                 <h2 class="atProducts"> signature house blend</h2>
                 <p>classico - beans</p>
@@ -402,7 +458,7 @@
               </div>
               <div class="products_stage">
                 <figure>
-                  <img src="images/capsule_duplicat.jpg" alt="">
+                  <img src="images/frankie_gifts_ideas.jpg" alt="gift ideas">
                 </figure>
                 <h2 class="atProducts"> single origin</h2>
                 <p>brazil - beans</p>
@@ -410,62 +466,43 @@
               </div>
               <div class="products_stage">
                 <figure>
-                  <img src="images/capsule_duplicat.jpg" alt="">
+                  <img src="images/frankie_gifts_ideas.jpg" alt="gift ideas">
                 </figure>
                 <h2 class="atProducts"> colombia - whole beans</h2>
-                <p class="price_lab">from £4.25</p>
+                <p class="price_lab">from £3.25</p>
               </div>
               <div class="products_stage"> 
                 <figure>
-                <img src="images/capsule_duplicat.jpg" alt="">
+                  <img src="images/frankie_gifts_ideas.jpg" alt="gift ideas">
                 </figure>
                 <h2 class="atProducts"> special blend</h2>
-                <p class="price_lab">from £4.25</p>
+                <p class="price_lab">from £1.25</p>
               </div>
               <div class="products_stage">
                 <figure>
-                <img src="images/capsule_duplicat.jpg" alt="">
+                  <img src="images/frankie_gifts_ideas.jpg" alt="gift ideas">
                 </figure>
                 <h2 class="atProducts"> special blend</h2>
                 <p>siena - whole beans</p>
-                <p class="price_lab">from £4.25</p>
+                <p class="price_lab">from £2.25</p>
               </div>
               <div class="products_stage">
                   <figure>
-                  <img src="images/capsule_duplicat.jpg" alt="">
+                    <img src="images/frankie_gifts_ideas.jpg" alt="gift ideas">
                   </figure>
                   <h2 class="atProducts"> special blend</h2>
                 <p>siena - ground coffee</p>
                 <p class="price_lab">from £4.25</p>
                </div>
-               <div class="products_stage">
-                  <figure>
-                    <img src="images/capsule_duplicat.jpg" alt="">
-                  </figure>
-                  <h2 class="atProducts"> signature house blend</h2>
-                <p>ground coffee - decaffeinated</p>
-                <p class="price_lab">from £4.25</p>
-                </div>
-                <div class="products_stage">
-                  <figure>
-                    <img src="images/capsule_duplicat.jpg" alt="">
-                  </figure>
-                  <h2 class="atProducts">discovery bundle - whole beans</h2>
-                  <p class="price_lab">£19.99</p>
-                </div>
-                <div class="products_stage">
-                  <figure>
-                    <img src="images/capsule_duplicat.jpg" alt="">
-                  </figure>
-                  <h2 class="atProducts"> ground coffee discovery bundle</h2>
-                  <p class="price_lab">£19.99</p>
-                </div>
+           
             </div>
+           
         </section>
+         <!--list for all clearance products-->
         <section class="top_one_1 last-top hidden" id="box5" >
           <div class="product_banner_buttons">
             <figure>
-              <img src="images/clearance.jpg" alt="clearance">
+              <img src="images/frankie_clearance.jpg" alt="clearance items of products">
             </figure>
             <h3> clearance</h3>
             <div class="products_stage_Btn">
@@ -475,63 +512,74 @@
                 <a href="javascript:void(0);" class="button" onclick="showSection('box4')">gift ideas</a>
                 <a href="javascript:void(0);" class="button" onclick="showSection('box5')">clearance</a>
               </div>
-            </div>
-
+            </div>    
             <div class="grid-for-all-products">
               <div class="products_stage">
                 <figure>
-                    <img src="images/capsule_duplicat.jpg" alt="">
+                  <img src="images/frankie_clearance.jpg" alt="clearance items of products">
                 </figure>
                 <h2 class="atProducts"> signature house blend</h2>
                 <p>classico - beans</p>
                 <p class="price_lab">from £4.25</p>
               </div>
-            
               <div class="products_stage">
                 <figure>
-                  <img src="images/capsule_duplicat.jpg" alt="">
+                  <img src="images/frankie_clearance.jpg" alt="clearance items of products">
+                </figure>
+                <h2 class="atProducts"> single origin</h2>
+                <p>brazil - beans</p>
+                <p class="price_lab">from £4.45</p>
+              </div>
+              <div class="products_stage">
+                <figure>
+                  <img src="images/frankie_clearance.jpg" alt="clearance items of products">
                 </figure>
                 <h2 class="atProducts"> colombia - whole beans</h2>
-                <p class="price_lab">from £4.25</p>
+                <p class="price_lab">from £1.25</p>
               </div>
               <div class="products_stage"> 
                 <figure>
-                <img src="images/capsule_duplicat.jpg" alt="">
+                  <img src="images/frankie_clearance.jpg" alt="clearance items of products">
                 </figure>
                 <h2 class="atProducts"> special blend</h2>
-                <p class="price_lab">from £4.25</p>
+                <p class="price_lab">from £3.25</p>
               </div>
               <div class="products_stage">
                 <figure>
-                <img src="images/capsule_duplicat.jpg" alt="">
+                  <img src="images/frankie_clearance.jpg" alt="clearance items of products">
                 </figure>
                 <h2 class="atProducts"> special blend</h2>
                 <p>siena - whole beans</p>
-                <p class="price_lab">from £4.25</p>
+                <p class="price_lab">from £2.25</p>
               </div>
+              <div class="products_stage">
+                  <figure>
+                    <img src="images/frankie_clearance.jpg" alt="clearance items of products">
+                  </figure>
+                  <h2 class="atProducts"> special blend</h2>
+                <p>siena - ground coffee</p>
+                <p class="price_lab">from £4.05</p>
+               </div>
                <div class="products_stage">
-                  <figure>
-                    <img src="images/capsule_duplicat.jpg" alt="">
-                  </figure>
-                  <h2 class="atProducts"> signature house blend</h2>
-                <p>ground coffee - decaffeinated</p>
-                <p class="price_lab">from £4.25</p>
-                </div>
-                <div class="products_stage">
-                  <figure>
-                    <img src="images/capsule_duplicat.jpg" alt="">
-                  </figure>
-                  <h2 class="atProducts">discovery bundle - whole beans</h2>
-                  <p class="price_lab">£19.99</p>
-                </div>
-                <div class="products_stage">
-                  <figure>
-                    <img src="images/capsule_duplicat.jpg" alt="">
-                  </figure>
-                  <h2 class="atProducts"> ground coffee discovery bundle</h2>
-                  <p class="price_lab">£19.99</p>
-                </div>
+                <figure>
+                  <img src="images/frankie_clearance.jpg" alt="clearance items of products">
+                </figure>
+                <h2 class="atProducts"> special blend</h2>
+              <p>siena - ground coffee</p>
+              <p class="price_lab">from £4.05</p>
+             </div>
+             <div class="products_stage">
+              <figure>
+                <img src="images/frankie_clearance.jpg" alt="clearance items of products">
+              </figure>
+              <h2 class="atProducts"> special blend</h2>
+            <p>siena - ground coffee</p>
+            <p class="price_lab">from £4.05</p>
+           </div>
+
+           
             </div>
+           
         </section>
 
       </div>
@@ -561,11 +609,15 @@
                <li><a href="clickapp.html">the app</a></li>
              </ul>
          
-           </footer>
+         </footer>
         
         
     </main>
     <script src="header.js" defer></script>
+    <script src="productsinfoloader.js" defer></script>
     <script src="shopproducts.js" defer></script>
+    <script src="additems.js" defer></script>
+
+   
 </body>
 </html>
