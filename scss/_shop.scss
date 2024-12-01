@@ -175,9 +175,7 @@ body{
     button::-webkit-outer-spin-button,
     button::-webkit-inner-spin-button {
     -webkit-appearance: none;
-    margin: 0;
-        
-   
+    margin: 0;  
 }
 
     button:disabled::-webkit-input-placeholder {
@@ -311,6 +309,11 @@ body{
         font-size: 1.1rem;
         border: 0rem;
     
+    }
+    .form-text-background{
+        display: grid;
+        justify-content: center;
+
     }
 
 }
