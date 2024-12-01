@@ -1,4 +1,4 @@
-//style for coffee at home and all coffee products
+//style for coffee at home and all coffee products and shop products
 html{
     font-size: 16px;
 }
@@ -47,13 +47,15 @@ body{
       }
  
   img {
-    height:50vh;
+    height:100vh;
 }
 }
+
 .top_one_1{
-     img{
-        height: 50vh;
-     }
+  
+    img{
+        height: 100%;
+    }
  .top-text-home{
     font-family: "Open Sans", sans-serif;
     text-transform: uppercase;
@@ -80,6 +82,9 @@ body{
     display: grid;
     gap: 1.5rem;
 
+    img{
+        height: 100%;
+    }
     h2,
     h3{
         text-transform: uppercase;
@@ -128,6 +133,10 @@ body{
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
     margin: 3rem 0rem;
+
+    img{
+        height: 100%;
+    }
 }
 .atProducts{
     font-family: "Open Sans", sans-serif;
@@ -137,7 +146,7 @@ body{
     line-height: 1.2;
 }
 .products_stage{
-
+    margin-left: 1rem;
     p{
         text-transform: uppercase;
         font-size: 0.8rem;
@@ -145,7 +154,200 @@ body{
    .price_lab{
      font-weight: 600;
     }
+    img{
+        border: 0.1rem solid #1a2309;
+    }
    }
+
+
+   
+//style for basket icon
+
+  .product-addBtn{
+    line-height: 2;
+   
+    button{
+        padding: 0.5rem;
+        color:#360036;
+        // background-color: red;
+    }
+        /* Specific reset for Safari to avoid button's default background */
+    button::-webkit-outer-spin-button,
+    button::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+        
+   
+}
+
+    button:disabled::-webkit-input-placeholder {
+    color: #999; /* Grey placeholder color for disabled button */
+    }
+}
+
+.mobile_toggle{
+   
+    .toggle-basket{
+        cursor: pointer;
+      .frankie_cart_basket{
+       
+        float: right;
+        margin-right: 2rem;
+
+        button{
+            padding: 0.4rem;
+            color:#360036;
+
+           /* Specific reset for Safari to avoid button's default background */
+           button::-webkit-outer-spin-button,
+           button::-webkit-inner-spin-button {
+           -webkit-appearance: none;
+           margin: 0;               
+          }
+          button:disabled::-webkit-input-placeholder {
+            color: #999; /* Grey placeholder color for disabled button */
+                     
+          }
+        }
+      }
+    }
+  
+   }
+//for cart basket icon for mobile device
+@media screen and (max-width: 768px){
+    .mobile_toggle{
+      
+        .toggle-basket{
+            display: flex;
+            align-items: center;
+            float: right;
+
+            .frankie_cart_basket{
+                margin-right: 0rem;
+  
+              }
+        }
+      
+       }
+ 
+    }
+    
+//modal style for items inside the basket  on shopproduct.html
+.modal_3{
+    z-index: 99; 
+    top: 7rem;
+    border: 0.093rem solid #315131;
+    display: none; 
+    position: fixed; 
+    bottom:0px;
+    left:0px;
+    right:0px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+
+    .form-text-background{
+        display: grid;
+        margin-inline: auto;
+        background-color: #fff;
+        font-family: "Open Sans", sans-serif;
+        width: 95%;
+        
+        h2{
+            font-family: "Open Sans", sans-serif;
+            text-align: center;
+            text-transform: uppercase;
+             margin: 2rem 0rem;
+        }
+
+      
+        form{
+            justify-items: center;
+            text-transform: uppercase;
+            font-family: "Open Sans", sans-serif;
+            line-height: 2;
+            margin-bottom: 1.2rem;
+          
+            input{ 
+                padding: 1.1rem;
+                width: 20rem;
+                text-align: justify;
+            }
+           
+        }
+        
+         
+    }
+    background-color: #04000076;
+  
+
+}
+.modal-content-product{
+    max-width: 900px;
+    margin-inline: auto;
+    background-color: #fff;
+    margin:2% auto;
+    padding: 1.25rem;
+    border: 0.083rem solid #315131;
+    width: 95%; /* Can adjust width */
+    position: relative; /* To position close button */
+    overflow: hidden; /* Prevent content overflow */
+
+
+  h2{
+    text-align: center;
+  }
+  p{
+    text-align: center;
+
+  }
+
+    .proceed-information{
+        margin-top: 2rem;
+        float: right;
+        padding: 2rem;
+        background-color: #acb3a8;
+        color: #000;
+        font-size: 1.1rem;
+        border: 0rem;
+    
+    }
+
+}
+
+
+//style for cart-items in the additems.js
+.cart-item{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    color:#360036;
+
+    button{
+        color:#360036;
+    }
+    .cart-item-button{
+        align-content: center;
+    }
+}
+.total-class{
+    display: flex;
+    background-color: #acb3a8;
+    padding: 1.2rem;
+    color: #000;
+    font-weight: bold;
+    justify-self: end;
+}
+.cart-name-image-price{
+     margin: 2rem 0rem;
+    p{
+        font-family: "Open Sans", sans-serif;
+        color:#360036;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+}
+
 //style for all coffee products tablets and desktop
 @media (max-width: 1000px) {
     .product_banner_buttons{
@@ -188,15 +390,14 @@ body{
 //ends
 //style for all coffee products mobile and tablets
 @media (max-width: 850px) {
+   
     .products_stage_Btn{
-       
         display: grid;
         grid-template-columns: auto;
         gap: 1.4rem;
         justify-content: center;
        
         a{
-           
             font-family: "Open Sans", sans-serif;
             text-transform: uppercase;
         }
@@ -221,91 +422,71 @@ body{
        .price_lab{
          font-weight: 600;
         }
+
+        img{
+            height: 100%;
+            border: 0.1rem solid #1a2309;
+        }
        }
 
 }
 //ends
 
+@media (max-width: 800px) {
+.all-top{
+    display: grid;
+    grid-template-columns:auto;
+    gap: 3rem;
+    margin: 3rem 0rem;
 
-@media (max-width: 600px) {
-    .all-top{
+}
+.top_one{
+    img{
+        height: 60vh;
+        width: 100%;
+    }
+}
+
+}
+@media (max-width: 581px) {
+
+    .grid-for-all-products{
         display: grid;
-        grid-template-columns:auto;
+        grid-template-columns: auto;
         gap: 3rem;
     }
-    
-.coffee_home_grid{
-    display: grid;
-    grid-template-columns: auto;
-    gap: 3rem;
-    margin-top: 6.4rem;
-}
-
-
-.top_one{
-  
-    h1{
+    .atProducts{
         font-family: "Open Sans", sans-serif;
-        text-transform: capitalize;
-        font-size: 2rem;
-        font-weight: bold;
-        margin: 2rem 1rem;
-    }
-    p{
-        font-family: "Open Sans", sans-serif;
-        line-height: 2;
-        font-size: 1rem;
-        margin: 0rem 1rem;
-    }
-  .freeDelivery{
-    text-align: center;
-    font-weight: 400;
-    padding: 1rem 0rem;
-    margin-top: 1.5rem;
-  }
-  img {
-    height:50vh;
-}
-}
-.top_one_1{
-   
-    img{
-        height: 40vh;
-    }
-    .top-text-home{
-        font-family: "Open Sans", sans-serif;
+        font-size: 1.2rem;
         text-transform: uppercase;
-        text-align: left;
-        padding: 2rem;
-        color: #141414;
-        background-color:#DBDBDB;
-        font-size: 1.3rem;
+        padding: 1rem 0rem;
     }
-}
-.last-top{
-    margin-bottom: 3rem;
-}
+    .products_stage{
+      
 
-//style for all coffee products mobiles
-.grid-for-all-products{
-    display: grid;
-    grid-template-columns: auto;
-    gap: 3rem;
-}
-.atProducts{
-    padding: 1rem 0rem;
-}
-.products_stage{
-
-    p{
-        font-size: 0.8rem;
-        padding-left: 0rem;
-    }
-   .price_lab{
-     font-weight: 600;
-    }
-   }
+        p{
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+       .price_lab{
+         font-weight: 600;
+        }
+            img{
+                height: 100%;
+                border: 0rem solid #1a2309;
+            }
+    
+       }
   
+}
+
+@media (orientation: landscape) {
+    .top_one{
+        img{
+            height: 80vh;
+        }
+    }
 
 }
+
 

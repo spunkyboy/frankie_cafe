@@ -1,4 +1,4 @@
-@use "_coffee_products";
+@use "_productsinfo";
 @use "_slideOne";
 @use "_allColors";
 @use"_slideTwo";
@@ -41,10 +41,11 @@ html {
 
 /* style.css */
 header{
+  position: fixed;  /* Fixes the header at the top */
+  top: 0;           
+  left: 0;          
+  width: 100%;      
   z-index: 10;
-  position: fixed;
-  width: 100%;
-  top: 0;
 }
 nav {
   display: flex;
@@ -60,7 +61,6 @@ nav {
   display: flex;
   justify-content: space-between;
   list-style: none;
-  padding: 2rem;
   margin: 0;
  
 }
@@ -114,13 +114,15 @@ nav {
 // Mobile Styles (Hamburger Menu)
 .click_Icon {
   display: none;
-  font-size: 3rem;
+  font-size: 2rem;
   color: #c5eff7;
   background: none;
-  border: none;
   cursor: pointer;
  
+ 
 }
+
+
 
 @media screen and (max-width: 768px) {
  .mobile_toggle{
@@ -129,9 +131,6 @@ nav {
   align-items: center;
   margin: 2rem;
 
-  div{
-    align-items: center;
-  }
  }
  .dropdown-content a {
   padding: 0.7rem 1rem;
@@ -150,8 +149,10 @@ nav {
 }
 
   .click_Icon {
-      display: block;
+      display: flex;
       color:#c5eff7;
+      margin-bottom: 0.5rem;
+      align-items: center;
 
   }
 
@@ -161,7 +162,6 @@ nav {
       align-items: center;
       width: 100%;
       background-color: #333333;
-     
       position: absolute;
       top: 7rem; 
       left: 0;
@@ -246,12 +246,11 @@ nav {
 @media (orientation: landscape) {
   .home-top-pic{
     display: grid;
-    grid-gap: 5px;
-    grid-auto-flow: column;
-    grid-template-columns: 100px 100px;
+    grid-template-columns: auto ;
+    grid-template-rows: auto auto;
+    height: 100vh;
     width: 100%;
-    justify-content: start;
-    
+
     p{
       font-size: 3rem;
       margin-left: 2rem;
@@ -420,36 +419,6 @@ a:hover{
     height: 70vh;
    }
 }
-
-//  .cart-items-2{
-//   display: grid;
-//   grid-template-columns: auto auto auto;
-//   gap: 1rem;
-  
-//    span{
-//     display: block;
-//    }
-//    a{
-//     border-bottom: 0rem;
-//     cursor: pointer;
-//    }
-//    a:hover{
-//     border-bottom: 0rem
-//    }
-//    .price-text-2{
-//     text-transform: uppercase;
-//     line-height: 2;
-//     text-align: center;
-//     padding: 1.2rem 0rem;
-//     font-weight: 300;
-//     font-size: 1rem;
-//     background-color: rgb(225, 224, 224);
-//    }
-//    img{
-//      height: 10rem;;
-    
-//    }
-//  }
 
 // stay connnects texts and images gallery
 .gallery_photos{
