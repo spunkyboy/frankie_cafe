@@ -36,17 +36,10 @@ html {
 .gaps-home-page{
   display: grid;
   gap: 3rem;
-  margin-top: 6.4rem;
 }
 
 /* style.css */
-header{
-  position: fixed;  /* Fixes the header at the top */
-  top: 0;           
-  left: 0;          
-  width: 100%;      
-  z-index: 10;
-}
+
 nav {
   display: flex;
   justify-content: space-between; // Space between logo and hamburger icon

@@ -87,11 +87,15 @@ body{
     }
     h2,
     h3{
+        display:flex;
         text-transform: uppercase;
         font-weight: 500;
         margin-left: 1rem;
         font-size: 1.2rem;
-        color: #141414;;
+        padding: 0.6rem;
+        background-color: #141414;;
+        color: white;
+        width: fit-content;
     }
   
 }
@@ -181,6 +185,7 @@ body{
     button:disabled::-webkit-input-placeholder {
     color: #999; /* Grey placeholder color for disabled button */
     }
+   
 }
 
 .mobile_toggle{
@@ -213,6 +218,8 @@ body{
    }
 //for cart basket icon for mobile device
 @media screen and (max-width: 768px){
+
+    
     .mobile_toggle{
       
         .toggle-basket{
@@ -271,7 +278,9 @@ body{
                 width: 20rem;
                 text-align: justify;
             }
-           
+           button{
+            padding: 0.5rem;
+           }
         }
         
          
@@ -319,7 +328,7 @@ body{
 }
 
 
-//style for cart-items in the additems.js
+//style for cart-items in the additems.js which shows in the basket
 .cart-item{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -327,10 +336,15 @@ body{
     color:#360036;
 
     button{
+        padding: 0.5rem;
         color:#360036;
     }
     .cart-item-button{
         align-content: center;
+    }
+    img{
+        width: 100%;
+        height: 100%;
     }
 }
 .total-class{
@@ -346,7 +360,7 @@ body{
     p{
         font-family: "Open Sans", sans-serif;
         color:#360036;
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-weight: 600;
     }
 }
