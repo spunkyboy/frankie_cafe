@@ -232,7 +232,7 @@ a:hover{
     margin: 7rem;
     right: 35px;
     top: 15px;
-    font-size: 1.7rem;
+    font-size: 1.9rem;
     color: close-text-color(allColors.$modalFontColor);
     z-index: 9;
   }
@@ -624,10 +624,11 @@ a:hover{
   margin: 2rem;
   left: 35px;
   top: 15px;
-  font-size: 1.6rem;
+  font-size: 1.9rem;
   color: allColors.$modalBackgroundColor;
   mix-blend-mode: difference;
   z-index: 9;
 }
+    
 
 }

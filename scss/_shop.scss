@@ -13,17 +13,23 @@ body{
 .coffee_home_grid{
     max-width: 1200px;
     margin-inline: auto;
-    margin-top: 6.4rem;
+ 
 }
 .all-top{
     display: grid;
-    grid-template-columns:repeat(3, 1fr);
+    grid-template-columns:repeat(2, 1fr);
     gap: 2rem;
     margin: 3rem 0rem;
+
+    img {
+        aspect-ratio: 1; 
+        height: 100%;
+    }
 }
 
+
 .top_one{
-  
+   
     h2{
         font-family: "Open Sans", sans-serif;
         text-transform: capitalize;
@@ -45,10 +51,7 @@ body{
         padding: 1rem 0rem;
         margin-top: 1.5rem;
       }
- 
-  img {
-    height:100vh;
-}
+   
 }
 
 .top_one_1{
@@ -172,20 +175,22 @@ body{
     line-height: 2;
    
     button{
-        padding: 0.5rem;
-        color:#360036;
-        // background-color: red;
+        all: unset; /* Resets all inherited styles */
+        -webkit-appearance: none; 
+        -moz-appearance: none; 
+        appearance: none; 
+        background: none; 
+        border: none; /* Removes default border */
+        padding: 0; /* Remove padding */
+        margin: 0; /* Reset any margins */
+        font-size: 100%; /* Reset font size */
+        cursor: pointer; 
+        padding: 0.3rem;
+        background-color:#360036;
+        color: #f6f3f3;
     }
-        /* Specific reset for Safari to avoid button's default background */
-    button::-webkit-outer-spin-button,
-    button::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;  
-}
 
-    button:disabled::-webkit-input-placeholder {
-    color: #999; /* Grey placeholder color for disabled button */
-    }
+  
    
 }
 
@@ -199,20 +204,21 @@ body{
         margin-right: 2rem;
 
         button{
-            padding: 0.4rem;
-            color:#360036;
-
-           /* Specific reset for Safari to avoid button's default background */
-           button::-webkit-outer-spin-button,
-           button::-webkit-inner-spin-button {
-           -webkit-appearance: none;
-           margin: 0;               
-          }
-          button:disabled::-webkit-input-placeholder {
-            color: #999; /* Grey placeholder color for disabled button */
-                     
-          }
+            all: unset; /* Resets all inherited styles */
+            -webkit-appearance: none; 
+            -moz-appearance: none; 
+            appearance: none; 
+            background: none; 
+            border: none; /* Removes default border */
+            padding: 0; /* Remove padding */
+            margin: 0; /* Reset any margins */
+            font-size: 100%; /* Reset font size */
+            cursor: pointer; 
+            padding: 0.3rem;
+            background-color:#f6f3f3;
+            color:rgb(22, 21, 21);
         }
+    
       }
     }
   
@@ -280,9 +286,21 @@ body{
                 width: 20rem;
                 text-align: justify;
             }
-           button{
-            padding: 0.5rem;
-           }
+            button{
+                all: unset; /* Resets all inherited styles */
+                -webkit-appearance: none; 
+                -moz-appearance: none; 
+                appearance: none; 
+                background: none; 
+                border: none; /* Removes default border */
+                padding: 0; /* Remove padding */
+                margin: 0; /* Reset any margins */
+                font-size: 100%; /* Reset font size */
+                cursor: pointer; 
+                padding: 0.4rem;
+                background-color:#979797;
+                color:#000;
+            }
         }
         
          
@@ -338,8 +356,19 @@ body{
     color:#360036;
 
     button{
-        padding: 0.5rem;
-        color:#360036;
+        all: unset; /* Resets all inherited styles */
+        -webkit-appearance: none; 
+        -moz-appearance: none; 
+        appearance: none; 
+        background: none; 
+        border: none; /* Removes default border */
+        padding: 0; /* Remove padding */
+        margin: 0; /* Reset any margins */
+        font-size: 100%; /* Reset font size */
+        cursor: pointer; 
+        padding: 0.4rem;
+        background-color:#979797;
+        color:#000;
     }
     .cart-item-button{
         align-content: center;
