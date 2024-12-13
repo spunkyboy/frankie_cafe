@@ -15,6 +15,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
  <style>
 
 
@@ -33,7 +36,7 @@
 
  </style>
 
-  
+
   </head>
   
 <body>
@@ -77,7 +80,7 @@
  </header>
 
  <div class="wrapper-container">
-
+<a href="try.html">tryyyyyy</a>
    <main class="gaps-home-page">
     <section class="banner_grid">
       <div class="home-top-pic"> 
@@ -88,55 +91,34 @@
       <h3>Your coffee come first.</h3>
      </div>
     </section>
-  
-
-    <div class="slide-images-mobile">
-      <!--first slide of home page-->
-      <div class="slideshow-container" id="converted-show">
-        <div class="mySlides fade">
-          <a href="contactus.html">
-            <div class="numbertext">1 / 4</div>
-            <img src="images/in-store-service.webp" alt="in store-image" >
-            <div class="text">in store</div>
-          </a>
-        </div>
-        
-        <div class="mySlides fade" >
+  <!--first slider for mobile user-->
+    <div class="slider-container">
+      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+      <div class="slider">
+       <div class="images">
+       <a href="contactus.html">
+          <img src="images/in-store-service.webp" alt="Image 1">
+       </a>
+       </div>
+       <div class="images">
           <a href="clickapp.html">
-            <div class="numbertext">2 / 4</div>
-            <img src="images/coffe-app.webp" alt="click + collect-image" >
-            <div class="text">click + collect</div>
+            <img src="images/coffe-app.webp" alt="Image 2">
           </a>
-        </div>
-        
-        <div class="mySlides fade">
-          <a href="delivery.html">
-            <div class="numbertext">3 / 4</div>
-            <img src="images/delivery.jpg" alt="delivery-image" >
-            <div class="text">delivery</div>
-         </a>
-        </div>
-        <div class="mySlides fade" >
-          <a href="shop.html">
-            <div class="numbertext">4 / 4</div>
-            <img src="images/coffee-at-home.webp" alt="coffee-at-homne-image" >
-            <div class="text">coffee at home</div>
-          </a>
-        </div>
-        
-        <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❯</a>
-        
-        </div>
-        <br>
-        
-        <div style="text-align:center">
-          <span class="dot" onclick="currentSlide(1)"></span> 
-          <span class="dot" onclick="currentSlide(2)"></span> 
-          <span class="dot" onclick="currentSlide(3)"></span> 
-          <span class="dot" onclick="currentSlide(4)"></span> 
-        </div>
+       </div>
+          <div class="images">
+            <a href="delivery.html">
+             <img src="images/delivery.jpg" alt="Image 3">
+            </a>
+       </div>
+          <div class="images">
+            <a href="shop.html">
+             <img src="images/coffee-at-home.webp" alt="Image 4">
+            </a>
+       </div>
       </div>
+      <button class="next" onclick="moveSlide(1)">&#10095;</button>
+   </div>
+   
         <!--images for tablet screens , instore, delivery, coffee-at-home-->
         <div class="four-images-tablet-desktop">
             <div class="images-for-tablets">
@@ -213,7 +195,7 @@
                             <img src="images/coffee_food.jpg" alt="image-of-food"  id="middle_image_treat">
                          </figure>
                         <h2 class="menu-text-food">food</h2>
-                      </a>  
+                       </a>  
 
                        <a  onClick="location.href='drinks.html'" class="drink-button">
                         <figure>
@@ -225,53 +207,52 @@
                   </section>
           
       <!--Our Menu, coffee cup, food, drink images for mobile devices-->
-      <section class="menu-treat-text">
-        <h2>
-            Our Menu
-        </h2>
-        <h3 class="menu-lowercase">
-          Occasional treat and everyday favourites 
-        </h3>
-          <p>
-              Whether you're looking to start your day with tasty breakfast, grab a healthy option for lunch, treat yourself to something indulgent, or settle down with your usual coffee; we have options for everyone.
-          </p> 
+      <section class="menu-mobile">
+          <div class="menu-text-mobile">
+            <h2>
+                Our Menu
+            </h2>
+            <h3 class="menu-lowercase">
+              Occasional treat and everyday favourites 
+            </h3>
+            <p>
+                Whether you're looking to start your day with tasty breakfast, grab a healthy option for lunch, treat yourself to something indulgent, or settle down with your usual coffee; we have options for everyone.
+            </p> 
+          </div>
+      
+              <!-- Swiper Container -->
+              <div class="swiper slider-2">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    <a onClick="location.href='drinks.html'">
+                     <img src="images/coffee_front.jpg" alt="coffee in mug">
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a onClick="location.href='food.html'">
+                      <img src="images/coffee_food.jpg" alt=" coffee items">
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a onClick="location.href='coffee.html'">
+                      <img src="images/coffee-at-home.webp" alt="coffee at home">
+                    </a>
+                  </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+              
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              
+              </div>
+
+
         </section>
-      <div class="small-device-coffee-food">
-      <div class="items-container">
-        <div class="overflow-container">
-           <div class="myMenu fade4">
-            <div class="numbertext4">1 / 3</div>
-            <a href="coffee.html">
-               <img src="images/coffee_front.jpg" alt="image-of-a-coffee">
-               <div class="text4">coffee</div>
-            </a>
-         </div>
-        <div class="myMenu fade4">
-          <div class="numbertext4">2 / 3</div>
-          <a href="food.html">
-             <img src="images/coffee_food.jpg" alt="image-of-food">
-             <div class="text4">food</div>
-          </a>
-         </div>
-        <div class="myMenu fade4">
-          <div class="numbertext4">3 / 3</div>
-          <a href="drinks.html">
-             <img src="images/image_6.jpg" alt="image-of-a-drink">
-             <div class="text4">drink</div>
-          </a>
-        </div>
-      </div>
-          <a class="prev4" onclick="plusSlidesTwo(-1)">❮</a>
-          <a class="next4" onclick="plusSlidesTwo(1)">❯</a>
-        </div>
-     
-        <br>
-        <div style="text-align:center">
-          <span class="dot4" onclick="currentSlideTwo(1)"></span> 
-          <span class="dot4" onclick="currentSlideTwo(2)"></span> 
-          <span class="dot4" onclick="currentSlideTwo(3)"></span>  
-        </div>
-      </div>
+      
 
     <div class="work-place-image">
         <div>
@@ -304,40 +285,13 @@
             </div>
         <div class="options-of-coffee">
           <figure>
-           <img src="images/remarkable-image.jpg" alt="cups-of-coffee">
+           <img src="images/coffee_farm_2.webp" alt="cups-of-coffee">
           </figure>
         </div>
       </section>
   
      <!-- slide for coffee prices for tablets and desktop -->
-     <!-- <div class="cart-items-2">
-           <div class="splide__slide">
-             <a onClick="location.href='coffee_products.html'">
-              <figure>
-                 <img src="images/coffee_prices_1.jpg" alt="picture1">
-              </figure>
-              <div class="price-text-2">whole beans - classico <span>£3.70</span></div>
-             </a>
-           </div>
-           <div class="splide__slide">
-             <a>
-              <figure>
-                <img src="images/coffee_prices_1.jpg" alt="picture2">
-              </figure>
-           </a>
-             <div class="price-text-2">ground coffee bundle<span>£4.70</span></div>
-          </div>
-           <div class="splide__slide">
-             <a>
-              <figure>
-               <img src="images/coffee_prices_1.jpg" alt="picture3">
-              </figure>
-             </a>
-           <div class="price-text-2">coffe capsules - brazil<span>£2.70</span></div>
-       
-      </div>
-    </div> -->
-
+   
     <!--image app-->
     <div class="app-items">
       <div class="spunky-cafe-app">
@@ -397,8 +351,7 @@
           </div>
       </div>
     </div>
-    </div>
-</main>
+   </main>
       <footer class="top-footer-element">
        <ul >
         <li><a href="index.html">cafe</a></li>
@@ -426,12 +379,63 @@
         </ul>
     
       </footer>
+    </div>
+
+      <!--script code for swipe menu effort mobile devices for second slide-->
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const swiper2 = new Swiper('.slider-2', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop:true,
+            slidesPerView: 1, 
+
+            // If we need pagination
+            pagination: {
+              el: '.swiper-pagination',
+            },
+        
+            // Navigation arrows
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+        
+            // And if we need scrollbar
+            scrollbar: {
+              el: '.swiper-scrollbar',
+            },
+          });
+        
+        });
+
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.slider .images');
+        const totalImages = images.length;
+
+        function moveSlide(direction) {
+          // Calculate new index
+          const newIndex = currentIndex + direction;
+            
+          
+            // Check if next or previous slide is within bounds
+            if (newIndex >= 0 && newIndex < totalImages) {
+                currentIndex = newIndex;
+            }
+            
+            updateSlider();
+        }
+
+        function updateSlider() {
+            const offset = -currentIndex * 100;
+            const slider = document.querySelector('.slider');
+            slider.style.transform = `translateX(${offset}%)`;
+        }
 
 
+       </script>
 
   <script src="header.js" defer></script>
-  <script src="slideimages.js" defer></script>
-  <script src="coffeefood.js" defer></script>
 
   </body>
 </html>
