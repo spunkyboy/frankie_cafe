@@ -10,7 +10,8 @@ body{
         object-fit: cover;
         object-position: center;
         width: 100%;  
-        height: 100vh;
+        height: 100%;
+       
     }
     p{
         font-family: "Open Sans", sans-serif;
@@ -21,11 +22,8 @@ body{
         margin: 1rem 0rem;
     }
 }
-.wrapper-container{
-    max-width: 1200px;
-    margin-inline: auto;
-}
- 
+
+
 
 .h1__heading{
     text-transform: uppercase;
@@ -38,16 +36,19 @@ body{
     display: grid;
     gap: 4rem;
     margin-bottom: 4rem;
+    max-width: 1000px;
+    margin-inline: auto;
 }
 
 
 .remark_image_text{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    align-items: center;
     gap: 1rem;
     margin: 0rem 1rem;
     .remark_context{
-        align-self: center;
+        
         h2{
             text-transform: uppercase;
             margin: 1rem 0rem;
@@ -56,9 +57,8 @@ body{
         }
     }
     img{
-        border-radius: 3rem;
-        padding: 2rem;
-        height: 70vh;
+       
+        border-radius: 1rem;
     }
    
 }
@@ -66,6 +66,7 @@ body{
 .remarkable_context_2{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    align-items: center;
     gap: 1rem;
     margin: 0rem 1rem;
 
@@ -79,9 +80,7 @@ body{
         align-self: center;
     }
     img{
-        border-radius: 3rem;
-        padding: 2rem;
-        height: 70vh;
+        border-radius: 1rem;
     }
    
 }
@@ -89,11 +88,11 @@ body{
 .remarkable_context_3{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    align-items: center;
     gap: 1rem;
     margin: 0rem 1rem;
 
     .remark_context_3{
-        align-self: center;
 
         h4{
             text-transform: uppercase;
@@ -104,15 +103,13 @@ body{
     }
   
     img{
-        border-radius: 3rem;
-        padding: 2rem;
-        transform: perspective(500px) rotate3D(1, 1, 0, 30deg);
-        height: 70vh;
+        border-radius: 1rem;
+        height: 30rem;
     }
   
 }
 
-@media (max-width: 775px) {
+@media (max-width: 839px) {
 .remark_image_text{
     display: block;
     margin: 0rem;

@@ -41,6 +41,7 @@ body{
       opacity: 0.3;
     }
     img{
+      aspect-ratio: 1;
       cursor: pointer;
     }
   
@@ -130,6 +131,10 @@ a:hover{
   .swiper-slide{
   text-align: center;
   align-content: center;
+
+    img{
+      aspect-ratio: 1;
+    }
   }
 .menu-text-mobile{
   padding: 1rem;
