@@ -33,6 +33,32 @@ html {
   max-width: 1200px;
   margin-inline: auto;
 }
+
+//preloader styles for all pages
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: #333;
+}
+
+  /* If JavaScript is not available, show preloader and hide content */
+noscript #preloader {
+    display: block;
+}
+
+  noscript #content {
+    display: none;
+}
+
+
 .gaps-home-page{
   display: grid;
   gap: 3rem;

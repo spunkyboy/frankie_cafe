@@ -169,7 +169,7 @@ body{
 
 
    
-//style for basket icon
+//style for add-to-basket button
 
   .product-addBtn{
     line-height: 2;
@@ -190,6 +190,11 @@ body{
         color: #f6f3f3;
     }
 
+
+    button:hover{
+        background-color:#670367;
+        color: #f6f3f3;
+    }
   
    
 }
@@ -257,15 +262,19 @@ body{
     overflow-x: hidden;
     border: 0.093rem solid #315131;
 
+.modal-content-product{
+    display: grid;
+    gap: 2rem;
+    margin-inline: auto;
+    width: 100%;
 
+}
 
     .form-text-background{
-        display: grid;
-        margin-inline: auto;
         background-color: #fff;
         font-family: "Open Sans", sans-serif;
-        width: 95%;
-        
+      
+       
         h2{
             font-family: "Open Sans", sans-serif;
             text-align: center;
@@ -283,7 +292,7 @@ body{
           
             input{ 
                 padding: 1.1rem;
-                width: 20rem;
+                width: 18rem;
                 text-align: justify;
             }
             button{
@@ -301,8 +310,12 @@ body{
                 background-color:#979797;
                 color:#000;
             }
+            button:hover{
+                background-color:#000;
+                color:#979797;
+            }
         }
-        
+      
          
     }
     background-color: #04000076;
@@ -312,13 +325,11 @@ body{
 .modal-content-product{
     max-width: 900px;
     margin-inline: auto;
-    background-color: #fff;
-    margin:2% auto;
-    padding: 1.25rem;
+    background-color: hsl(0, 0%, 100%);
+    padding: 1.25rem 0rem;
     border: 0.083rem solid #315131;
-    width: 95%; /* Can adjust width */
-    position: relative; /* To position close button */
-    overflow: hidden; /* Prevent content overflow */
+    position: relative; 
+    overflow: hidden; 
 
 
   h2{
@@ -330,6 +341,7 @@ body{
   }
 
     .proceed-information{
+        cursor: pointer;
         margin-top: 2rem;
         float: right;
         padding: 2rem;
@@ -338,6 +350,10 @@ body{
         font-size: 1.1rem;
         border: 0rem;
     
+    }
+    .proceed-information:hover{
+        background-color:#000 ;
+        color:#acb3a8;
     }
     .form-text-background{
         display: grid;
@@ -370,6 +386,11 @@ body{
         background-color:#979797;
         color:#000;
     }
+    button:hover{
+        background-color:#000;
+        color:#979797;
+    }
+
     .cart-item-button{
         align-content: center;
     }
