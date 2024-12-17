@@ -29,7 +29,7 @@
     font-size: 10px;
   }
 
-  
+
     </style>
   
 </head>
@@ -75,8 +75,12 @@
       </nav>
      </header>
     
-    
-       <div class="coffee_home_grid">
+      <!-- Preloader -->
+      <div id="preloader">
+        <p>Loading...</p>
+      </div>
+      <!-- main content for the preloader -->
+       <div class="coffee_home_grid"  id="content" style="display: none;">
           <section class="top_one" >
            
               <figure>
@@ -158,10 +162,24 @@
              </ul>
          
            </footer>
-        
+          <!-- Fallback message if JavaScript is disabled -->
+    <noscript>
+      <style>
+          #preloader {
+              display: block !important; /* Keep preloader visible */
+          }
+          #content {
+              display: none; /* Keep content hidden */
+          }
+      </style>
+      <div>
+          <p>It seems that JavaScript is disabled in your browser. Some content may not load as expected.</p>
+      </div>
+  </noscript>
         
     </main>
     <script src="shop.js" defer ></script>
     <script src="header.js" defer></script>
+    <script src="preloader.js" defere></script>
 </body>
 </html>

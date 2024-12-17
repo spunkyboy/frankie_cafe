@@ -75,8 +75,11 @@
     </div>
   </nav>
  </header>
-
-<div class="menus_wrapper">
+  <!-- Preloader -->
+  <div id="preloader">
+    <p>Loading...</p>
+  </div>
+<div class="menus_wrapper" id="content" style="display: none;">
     <!-- Modal structure -->
     <div id="myModal" class="modal">
       <div class="modal-content">
@@ -235,7 +238,7 @@
           <a href="">nutrition & allergen guide (northern ireland)</a>
         </section>
       </section>
-      </div>
+</div>
     </main>
     <footer class="top-footer-element">
       <ul>
@@ -266,5 +269,6 @@
     </footer>
       <script src="menu.js" defer></script>
       <script src="header.js" defer></script>
+      <script src="preloader.js" defer></script>
 </body>
 </html>
