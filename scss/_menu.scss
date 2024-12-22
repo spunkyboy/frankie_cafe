@@ -607,7 +607,8 @@ a:hover{
   .modal_article_31{
    
     display: block;
-    margin: 1rem;
+    margin:0rem;
+   
     .table_info{
       background-color:allColors.$modalBackgroundColor;
        margin: 0 auto;
@@ -623,18 +624,20 @@ a:hover{
     font-size: 1rem;
   }
   img{
-    height: 350px;
+  height: 20rem;
   }
 }
 .close {
   position: absolute;
+ 
   margin: 2rem;
   left: 35px;
   top: 15px;
   font-size: 1.9rem;
   color: allColors.$modalBackgroundColor;
   mix-blend-mode: difference;
-  z-index: 9;
+  z-index: 99;
+
 }
     
 

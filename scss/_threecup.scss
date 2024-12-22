@@ -9,7 +9,7 @@
   img{
     @include images-shared;
     object-position: 12% 35%;
-    height: 65vh;
+    height: 80vh;
    
   }
 }
@@ -22,25 +22,26 @@ body{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+  align-items: center;
   margin: 5rem 0rem;
   box-shadow: 1px 1px 5px 1px rgb(23, 22, 22);
 
   .cup-books-text{
-    align-self: center;
     line-height: 2;
-    padding: 1rem;
+    padding-left: 1rem;
     font-weight: 250;
     p{
-      // text-transform: none;
       color: #002517
       }
   }
- img{
-  border-top-left-radius: 2rem;
-  border-bottom-left-radius: 2rem;
+ .books-image{
+  img{
+    aspect-ratio: 1;
+  }
+ }
 }
- 
-}
+
+
 .coffee-seed{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -58,6 +59,7 @@ body{
     }
   }
   img{
+    aspect-ratio: 1;
     border-radius: 2.5rem 999rem 999rem 2.5rem;
   }
 }
@@ -79,6 +81,8 @@ body{
     }
   }
   img{
+    aspect-ratio: 1;
+    width: 100%;
     border-bottom-left-radius: 2rem;
     border-top-left-radius: 2rem;
   }
@@ -91,7 +95,6 @@ height: 550px;
 .swiper-slide{
 display: grid;
 grid-template-columns: repeat(2, 1fr);
-gap: 1rem;
 
 div{
   align-self: center;
@@ -126,31 +129,37 @@ ul,
 }
 }
 
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 777px){
   .coffee-pot,
   .coffee-seed,
   .three-cup-books{
     display: block;
+
+    .cup-books-text{
+      margin-bottom: 1rem;
+    }
   
   }
   .coffee-pot{
     img{
+      height: 100%;
+      width: 100%; /* Ensure the image maintains its aspect ratio */
+      object-fit: cover;
       border-radius: 3rem;
     }
   }
 }
 
 
-@media only screen and (max-width: 735px){
+@media only screen and (max-width: 777px){
   .swiper-wrapper{
     .swiper-slide{
     display: grid;
     grid-template-columns: auto;
-    gap: 0rem;
-    line-height: 2;
+    
     div{
       align-content: center;
-      height: 25rem;
+      height: auto;
       font-weight: 200;
       padding: 1rem;
       background-color: #b8b8b4;
@@ -163,6 +172,12 @@ ul,
       font-weight: 500;
       font-size: 1.3rem;
     }
+    img {
+      max-height: 20rem;
+      height: 100%;
+      width: 100%; /* Ensure the image maintains its aspect ratio */
+      object-fit: cover; /* Make sure the image doesn't stretch or distort */
+  }
      }
      .swiper-text,
      .swiper-text-right{
