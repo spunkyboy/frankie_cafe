@@ -33,7 +33,6 @@
     font-size: 10px;
   }
 
-
  </style>
 
 
@@ -78,12 +77,12 @@
     </div>
   </nav>
  </header>
-
   <!-- Preloader -->
-  <div id="preloader">
-    <p>Loading...</p>
+  <div class="full-page-loader" id="preloader">
+    <div class="spinner"></div>
   </div>
- <div class="wrapper-container" id="content" style="display: none;">
+
+ <div class="wrapper-container" >
    <main class="gaps-home-page">
     <section class="banner_grid">
       <div class="home-top-pic"> 
@@ -100,22 +99,22 @@
       <div class="slider">
        <div class="images">
        <a href="contactus.html">
-          <img src="images/in-store-service.webp" alt="Image 1">
+          <img src="images/in-store-service.webp" alt="shop location">
        </a>
        </div>
        <div class="images">
           <a href="clickapp.html">
-            <img src="images/coffe-app.webp" alt="Image 2">
+            <img src="images/coffe-app.webp" alt="click and collect app">
           </a>
        </div>
           <div class="images">
             <a href="delivery.html">
-             <img src="images/delivery.jpg" alt="Image 3">
+             <img src="images/delivery.jpg" alt="delivery">
             </a>
        </div>
           <div class="images">
             <a href="shop.html">
-             <img src="images/coffee-at-home.webp" alt="Image 4">
+             <img src="images/coffee-at-home.jpg" alt="coffee at home">
             </a>
        </div>
       </div>
@@ -128,7 +127,7 @@
               <div> 
                 <figure class="tablet__item">
                   <a href="contactus.html">
-                    <img src="images/in-store-service.webp"  alt="Image instore">
+                    <img src="images/in-store-service.webp"  alt="shop location">
                     <p class="text-over-image">in store</p>
                    </a>
                 </figure>  
@@ -136,7 +135,7 @@
               <div> 
                 <figure class="tablet__item">
                   <a href="clickapp.html">
-                    <img src="images/coffe-app.webp"  alt="Image-click-collect">        
+                    <img src="images/coffe-app.webp"  alt="click and collect app">        
                     <p class="text-over-image">click + collect</p>
                   </a>
                 </figure>
@@ -144,7 +143,7 @@
               <div> 
                 <figure class="tablet__item">
                   <a href="delivery.html">
-                    <img src="images/delivery.jpg"  alt="delivery-image">
+                    <img src="images/delivery.jpg"  alt="delivery">
                     <p class="text-over-image">delivery</p>
                   </a>
                 </figure>
@@ -152,7 +151,7 @@
               <div> 
                 <figure class="tablet__item">
                   <a href="shop.html">
-                    <img src="images/coffee-at-home.webp"  alt="image-coffee-home">
+                    <img src="images/coffee-at-home.jpg"  alt="coffee at home">
                     <p class="text-over-image">coffee at home</p>
                   </a>
                 </figure>
@@ -388,10 +387,8 @@
       <script>
         document.addEventListener('DOMContentLoaded', function() {
           const swiper2 = new Swiper('.slider-2', {
-            // Optional parameters
             direction: 'horizontal',
-            // loop:true,
-            // slidesPerView: 1, 
+        
 
             // If we need pagination
             pagination: {

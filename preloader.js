@@ -1,17 +1,8 @@
 
-  window.addEventListener('load', function() {
-    // Hide the preloader and show the main content after the page is fully loaded
-    const preloader = document.getElementById('preloader');
-    const content = document.getElementById('content');
-    
-      // Check if both elements exist before modifying their styles
-      if (preloader && content) {
-        preloader.style.display = 'none';  // Hide the preloader
-        content.style.display = 'block';   // Show the main content
-    }
+document.body.classList.add('js-enabled');
+
+// Hide the preloader once the page is fully loaded
+window.addEventListener('load', function() {
+    var preloader = document.querySelector('.full-page-loader');
+    preloader.style.display = 'none';
 });
-
-
-
-
-

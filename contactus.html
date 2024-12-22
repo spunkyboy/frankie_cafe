@@ -210,30 +210,34 @@
       </div>
     </nav>
    </header>
-
+  <!-- Preloader -->
+  <div class="full-page-loader" id="preloader">
+    <div class="spinner"></div>
+  </div>
+  
    <div class="wrapper-container">
-<main class= "gaps-home-page">
- <section >
-  <h2 class="h1__heading">contact us</h2>
-  <div class="map-text">
-  <div class="headAddress">
-    <h2 class="headContact">Find Your Current Location and Nearby Shops</h2>
-    <address>
-      <span>Address:</span>
-      Frankie Holdings Limited
-      9-15 Neal Street
-      Covent Garden
-      Leeds
-      LS12 2AX
-    </address>
-  </div>
-  <div class="map-loading-text">
-      <p id="loading" style="display: none;">Loading...</p>
-      <div id="map"></div>
-  </div>
-  </div>
-</section>
- </main>
+    <main class= "gaps-home-page">
+    <section >
+      <h2 class="h1__heading">contact us</h2>
+      <div class="map-text">
+      <div class="headAddress">
+        <h2 class="headContact">Find Your Current Location and Nearby Shops</h2>
+        <address>
+          <span>Address:</span>
+          Frankie Holdings Limited
+          9-15 Neal Street
+          Covent Garden
+          Leeds
+          LS12 2AX
+        </address>
+      </div>
+      <div class="map-loading-text">
+          <p id="loading" style="display: none;">Loading...</p>
+          <div id="map"></div>
+      </div>
+      </div>
+    </section>
+    </main>
 </div> 
  <footer class="top-footer-element">
   <ul >
@@ -263,6 +267,7 @@
 
  </footer>
   <script src="header.js" defer></script>
+  <script src="preloader.js" defer></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZkdbG_jbeaL2WWOYAWgzhgckRDgctS0U&libraries=places" async defer></script>
   </body>
 </html>
