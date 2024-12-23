@@ -6,3 +6,4 @@ window.addEventListener('load', function() {
     var preloader = document.querySelector('.full-page-loader');
     preloader.style.display = 'none';
 });
+
