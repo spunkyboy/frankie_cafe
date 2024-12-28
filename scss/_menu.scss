@@ -639,8 +639,8 @@ a:hover{
   align-items: center;
   position: absolute;
   margin: 2rem;
-  left: 35px;
-  top: 15px;
+  left: 15px;
+  top: 10px;
   font-size: 1.9rem;
   color: allColors.$modalBackgroundColor;
   width: 2rem;
@@ -648,7 +648,7 @@ a:hover{
   z-index: 99;
 
 }
-       /* Preloader Styles */
+//        /* Preloader Styles */
 .preloader2 {
   position: absolute;
   top: 0;
@@ -684,12 +684,12 @@ a:hover{
 
 
 /* Hide preloader when image is loaded */
-.preload-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  visibility: hidden; /* Hidden until fully loaded */
-}
+// .preload-img {
+//   display: block;
+//   max-width: 100%;
+//   height: auto;
+//   visibility: hidden; /* Hidden until fully loaded */
+// }
 
 /* Optional: Styling for the images */
 article .article_1 {
@@ -697,5 +697,7 @@ article .article_1 {
   width: 100%;
   height: auto;
 } 
+
+
 
 }
