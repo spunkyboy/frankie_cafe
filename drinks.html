@@ -30,6 +30,17 @@
     text-transform: uppercase;
     font-size: 10px;
   }
+
+  /* Preloader styling */
+/* .preloader {
+    text-align: center;
+    padding: 20px;
+}
+
+.preloader img {
+    width: 50px; 
+    height: 50px;
+} */
    </style>
   </head>
 <body>
@@ -72,7 +83,7 @@
   </nav>
  </header>
 
-  <!-- Preloader -->
+  <!-- Preloader full page -->
   <div class="full-page-loader" id="preloader">
     <div class="spinner"></div>
   </div>
@@ -84,6 +95,10 @@
             <div class="modal-content">
                 <span class="close" onclick="closeModal()">&times;</span>
                 <div id="modal-content"> 
+                   <!-- Preloader for modal -->
+                  <div id="preloader2" class="preloader2">
+                    <div class="spinner2"></div>
+                  </div>
                   <div id="content"></div>
                 </div>
             </div>
@@ -274,6 +289,6 @@
       <script src="menu.js" defer></script>
       <script src="header.js" defer></script>
       <script src="preloader.js" defer></script>
-      <script src="preloadermenus.js" defer></script>
+      <!-- <script src="preloadermenus.js" defer></script> -->
 </body>
 </html>
