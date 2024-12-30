@@ -1,4 +1,4 @@
-//style for coffee at home and all coffee products and shop products
+//style for coffee at home and all coffee products and shopproducts.html
 html{
     font-size: 16px;
 }
@@ -26,7 +26,6 @@ body{
         height: 100%;
     }
 }
-
 
 .top_one{
    
@@ -75,12 +74,42 @@ body{
     background-color: #141414;
     color:#DBDBDB;
 }
+//preloader for all shop products.html
+#preloaderProducts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(222, 222, 222); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999; /* Ensure it's above the image */
+    opacity: 1;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.spinner-3 {
+    border: 4px solid #f3f3f3; /* Light gray border */
+    border-top: 4px solid #3498db; /* Blue color for the spinner */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 
 }
 //style for all coffee products  desktop
 #box1{
     max-width: 1200px;
     margin-inline: auto;
+    position: relative;
 }
 .product_banner_buttons{
     display: grid;
