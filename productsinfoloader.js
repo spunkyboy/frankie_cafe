@@ -1,7 +1,11 @@
- // Get modal elements
+
+// Get modal elements for products information include spinner
 const modal = document.getElementById("myModal_2");
 const modalContent = document.getElementById("modal-content_2");
 const closeModalButton = document.getElementsByClassName("close_2")[0];
+
+// Preloader element
+const preloader_3 = document.getElementById('preloader_3');
 
 // Close modal when clicking on <span> (x)
 closeModalButton.addEventListener("click", function() {
@@ -15,8 +19,12 @@ window.addEventListener("click", function(event) {
     }
 });
 
-
 function pricesLoader(section) {
+    // Show preloader after a delay
+    setTimeout(() => {
+        preloader_3.style.display = "none";  // Display the preloader after delay
+    }, 1000); // Delay in milliseconds (1000ms)
+
     const xhr = new XMLHttpRequest();
     xhr.open('GET', 'productsinfo.html', true);
     xhr.onload = function() {
@@ -38,14 +46,19 @@ function pricesLoader(section) {
 
             // Display the section content
             document.getElementById('contentChange').innerHTML = sectionContent || 'Content not found.';
+            
+            // show preloader
+            preloader_3.style.display = "block";
+            
             // Show the modal
-            document.getElementById('myModal_2').style.display = 'block';
+            modal.style.display = 'block';
         } else {
             document.getElementById('content_2').innerText = 'Error loading content.';
+            
+            // Hide preloader in case of error
+            preloader_3.style.display = "none";
         }
     };
     xhr.send();
 }
-
-
 

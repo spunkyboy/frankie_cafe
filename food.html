@@ -76,25 +76,28 @@
   </nav>
  </header>
 
-   <!-- Preloader -->
+     <!-- Preloader full page -->
    <div class="full-page-loader" id="preloader">
     <div class="spinner"></div>
   </div>
 
 <div class="menus_wrapper">
-    <!-- Modal structure -->
+    <!-- Modal structure for all products with information loading from modal pages-->
     <div id="myModal" class="modal">
       <div class="modal-content">
           <span class="close" onclick="closeModal()">&times;</span>
           <div id="modal-content"> 
+              <!-- Preloader for modal from menu.js for modal pages -->
+             <div id="preloader2" class="preloader2">
+              <div class="spinner2"></div>
+            </div>
             <div id="content"></div>
           </div>
       </div>
   </div>
 
     <section class="all_info_container">
-    
-    
+      <h2 class="update-Information">information</h2>
         <section class="top_info">
             <div class="menuHeader">
                 <h2>menu</h2>
@@ -108,7 +111,7 @@
         </section>
         <section class="middle_info">
         
-           <!--product_1 and with a library and query load from modal pages-->
+           <!--product_1 with loader button from modal pages-->
             <div class="menu_product_1">
               <h3>Food</h3>
               <a href="javascript:void(0);" onclick="loadContent('Croissant')">
@@ -124,7 +127,7 @@
               <a href="">nutrition & allergen guide (northern ireland)</a>
            </div>
 
-            <!--product_2 and with a library and query load from modal pages-->
+            <!--product_2 with loader button from modal pages-->
             <div class="menu_product_2">
               <a href="javascript:void(0);"  onclick="loadContent('Fruit Salad')">
                 <p>Fruit Salad</p>
@@ -134,7 +137,7 @@
             </div>
 
 
-               <!--product_3 and with a library and query load from modal pages-->
+               <!--product_3 with loader button from modal pages-->
                <div class="menu_product_3">
                 <a href="javascript:void(0);"  onclick="loadContent('Apricot Croissant')">
                   <p>Apricot Croissant</p>
@@ -143,7 +146,7 @@
                 </a>
               </div>
 
-                 <!--product_4 and with a library and query load from modal pages-->
+                 <!--product_4 with loader button from modal pages-->
                  <div class="menu_product_4">
                   <a href="javascript:void(0);"  onclick="loadContent('Mango & Passionfruit')">
                     <p>Mango & Passionfruit Overnight</p>
@@ -152,7 +155,7 @@
                   </a>
                 </div>
 
-                 <!--product_5 and with a library and query load from modal pages-->
+                 <!--product_5 with loader button from modal pages-->
               <div class="menu_product_5">
                 <a href="javascript:void(0);"  onclick="loadContent('Porridge')">
                   <img src="images/porridge.jpg" alt="porridge_1">
@@ -161,7 +164,7 @@
                 </a>
               </div>
           
-                <!--product_6 and with a library and query load from modal pages-->
+                <!--product_6 with loader button from modal pages-->
                 <div class="menu_product_6">
                   <a href="javascript:void(0);"  onclick="loadContent('Pain Aux')">
                     <p>Pain Aux</p>
@@ -170,7 +173,7 @@
                   </a>
                 </div>
 
-            <!--product_7 and with a library and query load from modal pages-->
+            <!--product_7 with loader button from modal pages-->
             <div class="menu_product_7">
               <a href="javascript:void(0);"  onclick="loadContent('Tomato Ciabatta')">
                 <p>NEW Egg, Mushroom & Tomato</p>
@@ -179,7 +182,7 @@
               </a>
             </div>
 
-       <!--product_8 and with a library and query load from modal pages-->
+       <!--product_8 with loader button from modal pages-->
        <div class="menu_product_8">
         <a href="javascript:void(0);"  onclick="loadContent('Bacon Ciabatta')">
           <p>Bacon Ciabatta</p>
@@ -188,7 +191,7 @@
         </a>
       </div>
 
-       <!--product_9 and with a library and query load from modal pages-->
+       <!--product_9 with loader button from modal pages-->
        <div class="menu_product_9">
         <a href="javascript:void(0);"  onclick="loadContent('Berry Granola')">
           <p>Berry Granola</p>
@@ -197,7 +200,7 @@
         </a>
       </div>
 
-        <!--product_10 and with a library and query load from modal pages-->
+        <!--product_10 with loader button from modal pages-->
         <div class="menu_product_10">
           <a href="javascript:void(0);"  onclick="loadContent('Smoked Bacon Brioche')">
             <p>Smoked Bacon Brioche (NI)</p>
@@ -244,7 +247,7 @@
       </section>
       </div>
     </main>
-
+<!-- footer for food page-->
     <footer class="top-footer-element">
       <ul>
         <li><a href="index.html">cafe</a></li>
