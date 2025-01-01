@@ -4,7 +4,7 @@ const modal = document.getElementById("myModal_2");
 const modalContent = document.getElementById("modal-content_2");
 const closeModalButton = document.getElementsByClassName("close_2")[0];
 
-// Preloader element
+// Preloader element for modal on shop products.html
 const preloader_3 = document.getElementById('preloader_3');
 
 // Close modal when clicking on <span> (x)
@@ -56,7 +56,7 @@ function pricesLoader(section) {
             document.getElementById('content_2').innerText = 'Error loading content.';
             
             // Hide preloader in case of error
-            preloader_3.style.display = "none";
+            // preloader_3.style.display = "none";
         }
     };
     xhr.send();
