@@ -29,3 +29,7 @@ I have designed dropdown list of buttons include coffee, drinks and food product
 - Descriptions: Provide short descriptions of each item, highlighting key ingredients or unique features.
 - Guide: Provided nutrition and allergy guide which users can able to read throug for allergy guidance.
 - Extras: Provided extras iterms where users have the choice option of drinks, cafe and food. eg raspberry and marshmallows
+### Locations Page
+- Frankie cafe has just one location
+- Provided map that will help you to find the closest shop nearby and users current location using Google Api.
+- Telephone number.
