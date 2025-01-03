@@ -43,3 +43,13 @@ I have designed dropdown list of buttons include coffee, drinks and food product
 
 ###  About Us / Brand Story Page
 - Provided information to users who want to know more about Frankie cafe and why they should care about Frankie Cafe products. Provided information about the origin of Frankie Cafe, Taste of our coffee and the award wining of our classico blend. Provided history behind Frankie cafe and how the brand started.
+###  Mobile Optimization
+- Fast Loading: Ensure images are optimized for mobile, and the site loads quickly. using srcset in html, photoshop and sqooush app to reduce the file size and format into webp.
+- Touch-Friendly: Make buttons and links large enough for easy tapping.
+- Mobile Menu: Have a collapsible, easy-to-use mobile menu for quick access.
+![Alt Text](images/menu-collapse.jpg)
+
+### footer
+- Links: Home, Menu, Locations, Social Media, Contact, Terms & Conditions, Privacy Policy, Press Releases.
+- Location Information: Address, phone number, and a link to the full Locations page.
+
