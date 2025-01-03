@@ -41,6 +41,9 @@ I have designed dropdown list of buttons include coffee, drinks and food product
 - User Information: Provided users form for validation with the total amount of products added in the basket but yet to add the payment method.
 ![Alt Text](images/items-basket-info.jpg)
 
+### Functional Requirements:
+- Primary Navigation: users able to naviagte through menu with 3 categrories where each categories have grid of products images and information. each information click comes up with a modal with products information, eg image, kcal, grams, kg.
+
 ###  About Us / Brand Story Page
 - Provided information to users who want to know more about Frankie cafe and why they should care about Frankie Cafe products. Provided information about the origin of Frankie Cafe, Taste of our coffee and the award wining of our classico blend. Provided history behind Frankie cafe and how the brand started.
 ###  Mobile Optimization
@@ -48,6 +51,25 @@ I have designed dropdown list of buttons include coffee, drinks and food product
 - Touch-Friendly: Make buttons and links large enough for easy tapping.
 - Mobile Menu: Have a collapsible, easy-to-use mobile menu for quick access.
 ![Alt Text](images/menu-collapse.jpg)
+
+### Tools & Technologies Used
+- speedpageInsight
+- Javascript
+- HTML
+- CSS & SCSS
+- Font Awesome
+- w3school.com
+- Markdown
+- XMLHttpRequest
+- W3C Markup Validation Service
+- Github
+- Git
+- localstorage
+- Photoshop
+- colorsafe.co
+- webaim.org
+
+
 
 ### footer
 - Links: Home, Menu, Locations, Social Media, Contact, Terms & Conditions, Privacy Policy, Press Releases.
