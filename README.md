@@ -33,3 +33,9 @@ I have designed dropdown list of buttons include coffee, drinks and food product
 - Frankie cafe has just one location
 - Provided map that will help you to find the closest shop nearby and users current location using Google Api.
 - Telephone number.
+
+### Lazy loader
+- Provided lazy loading that enhances the users experience on all the pages.
+###  Online Ordering 
+- Shop: Provided online order button where categories with 5 products, eg coffee capsules, coffee beans, Gift Ideas, Gift card and Clearance ( discounted prices ).
+- User Information: Provided users form for validation with the total amount of products added in the basket but yet to add the payment method.
