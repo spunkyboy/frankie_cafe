@@ -39,3 +39,4 @@ I have designed dropdown list of buttons include coffee, drinks and food product
 ###  Online Ordering 
 - Shop: Provided online order button where categories with 5 products, eg coffee capsules, coffee beans, Gift Ideas, Gift card and Clearance ( discounted prices ).
 - User Information: Provided users form for validation with the total amount of products added in the basket but yet to add the payment method.
+![Alt Text](images/items-basket-info.jpg)
