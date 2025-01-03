@@ -40,6 +40,7 @@ I have designed dropdown list of buttons include coffee, drinks and food product
 - Shop: Provided online order button where categories with 5 products, eg coffee capsules, coffee beans, Gift Ideas, Gift card and Clearance ( discounted prices ).
 - User Information: Provided users form for validation with the total amount of products added in the basket but yet to add the payment method.
 ![Alt Text](images/items-basket-info.jpg)
+- colors: #370501, #131301, #363630, #969696, #74726f,
 
 ### Functional Requirements:
 - Primary Navigation: users able to naviagte through menu with 3 categrories where each categories have grid of products images and information. each information click comes up with a modal with products information, eg image, kcal, grams, kg.
