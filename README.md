@@ -75,4 +75,5 @@ I have designed dropdown list of buttons include coffee, drinks and food product
 ### footer
 - Links: Home, Menu, Locations, Social Media, Contact, Terms & Conditions, Privacy Policy, Press Releases.
 - Location Information: Address, phone number, and a link to the full Locations page.
+- ![Alt Text](images/footer-pic.jpg)
 
