@@ -40,3 +40,6 @@ I have designed dropdown list of buttons include coffee, drinks and food product
 - Shop: Provided online order button where categories with 5 products, eg coffee capsules, coffee beans, Gift Ideas, Gift card and Clearance ( discounted prices ).
 - User Information: Provided users form for validation with the total amount of products added in the basket but yet to add the payment method.
 ![Alt Text](images/items-basket-info.jpg)
+
+###  About Us / Brand Story Page
+- Provided information to users who want to know more about Frankie cafe and why they should care about Frankie Cafe products. Provided information about the origin of Frankie Cafe, Taste of our coffee and the award wining of our classico blend. Provided history behind Frankie cafe and how the brand started.
