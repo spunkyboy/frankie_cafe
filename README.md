@@ -74,7 +74,8 @@ I have designed dropdown list of buttons include coffee, drinks and food product
 - google api
 
 ### Testing
--  W3C Validator 
+-  W3C Validator
+-  speedpageInsight
 
 ### footer
 - Links: Home, Menu, Locations, Social Media, Contact, Terms & Conditions, Privacy Policy, Press Releases.
