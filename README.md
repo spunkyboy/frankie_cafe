@@ -69,6 +69,8 @@ I have designed dropdown list of buttons include coffee, drinks and food product
 - Photoshop
 - colorsafe.co
 - webaim.org
+- stackflow
+- chatgpt
 
 ### Testing
 -  W3C Validator 
