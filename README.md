@@ -76,6 +76,7 @@ I have designed dropdown list of buttons include coffee, drinks and food product
 ### Testing
 -  W3C Validator
 -  speedpageInsight
+-  jest
 
 ### footer
 - Links: Home, Menu, Locations, Social Media, Contact, Terms & Conditions, Privacy Policy, Press Releases.
