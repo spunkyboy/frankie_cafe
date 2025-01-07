@@ -3,3 +3,7 @@ window.addEventListener('load', function () {
       document.getElementById('preloader').style.display = 'none';
     }, 2000); // 3000ms = 3 seconds delay
   });
+
+
+  
+
