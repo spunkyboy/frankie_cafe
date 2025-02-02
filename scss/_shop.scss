@@ -79,11 +79,10 @@ body{
         padding: 1rem 0rem;
         margin-top: 1.5rem;
       }
-   
 }
 
 .top_one_1{
-  
+  margin-top: 7rem;
     img{
         height: 100%;
     }
@@ -161,8 +160,6 @@ body{
         color: #DBDBDB;
         padding: 0.4rem;  /* Keep padding consistent */
       }
-   
-   
 }
 .grid-for-all-products{
     display: grid;
@@ -256,30 +253,10 @@ body{
     }
   
    }
-//for cart basket icon for mobile device
-@media screen and (max-width: 768px){
 
-    
-    .mobile_toggle{
-      
-        .toggle-basket{
-            display: flex;
-            align-items: center;
-            float: right;
-
-            .frankie_cart_basket{
-                margin-right: 0rem;
-  
-              }
-        }
-      
-       }
- 
-    }
-    
 //modal style for items inside the basket  on shopproduct.html
 .modal_3{
-    z-index: 99; 
+    z-index: 8888; 
     display: none; 
     position: fixed; 
     top: 0;
@@ -301,8 +278,8 @@ body{
     .form-text-background{
         background-color: #fff;
         font-family: "Open Sans", sans-serif;
-      
        
+    
         h2{
             font-family: "Open Sans", sans-serif;
             text-align: center;
@@ -312,7 +289,10 @@ body{
 
       
         form{
-            justify-items: center;
+            display: grid;
+            justify-content: center; /* Centers the form horizontally */
+            align-items: center; /* Centers the form vertically */
+            min-height: 100vh; 
             text-transform: uppercase;
             font-family: "Open Sans", sans-serif;
             line-height: 2;
@@ -383,11 +363,7 @@ body{
         background-color:#000 ;
         color:#acb3a8;
     }
-    .form-text-background{
-        display: grid;
-        justify-content: center;
-
-    }
+   
 
 }
 
@@ -400,15 +376,15 @@ body{
     color:#360036;
 
     button{
-        all: unset; /* Resets all inherited styles */
+        all: unset; 
         -webkit-appearance: none; 
         -moz-appearance: none; 
         appearance: none; 
         background: none; 
-        border: none; /* Removes default border */
-        padding: 0; /* Remove padding */
-        margin: 0; /* Reset any margins */
-        font-size: 100%; /* Reset font size */
+        border: none; 
+        padding: 0; 
+        margin: 0; 
+        font-size: 100%; 
         cursor: pointer; 
         padding: 0.4rem;
         background-color:#979797;
@@ -529,6 +505,27 @@ body{
 }
 //ends
 
+//for cart basket icon for mobile device
+@media screen and (max-width: 768px){
+
+    
+    .mobile_toggle{
+      
+        .toggle-basket{
+            display: flex;
+            align-items: center;
+            float: right;
+
+            .frankie_cart_basket{
+                margin-right: 0rem;
+  
+              }
+        }
+      
+       }
+ 
+    }
+    
 @media (max-width: 800px) {
 .all-top{
     display: grid;

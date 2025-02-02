@@ -27,6 +27,7 @@ html {
 .wrapper-container{
   max-width: 1200px;
   margin-inline: auto;
+  margin-top: 7rem;
 }
 
  /* Full-page container */
@@ -40,7 +41,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999; /* Makes sure the preloader is on top of everything */
+  z-index: 1000; /* Makes sure the preloader is on top of everything */
 }
 
 /* CSS Spinner */
@@ -63,21 +64,21 @@ html {
   }
 }
 
-
-//  /* Fallback message for when JavaScript is disabled */
-//  noscript {
-//   display: block;
-//   font-size: 1.25rem;
-//   text-align: center;
-//   padding: 3.125rem;
-//   background-color: rgba(255, 255, 255, 0.9);
-// }
-
 /* fallback, Hide preloader when JavaScript is enabled */
 .js-enabled .full-page-loader {
   display: none;
 }
 
+.fixed-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333333;
+  color: white;
+  padding: 10px 0;
+  z-index: 8888; 
+}
 
 .gaps-home-page{
   display: grid;
@@ -174,7 +175,6 @@ nav {
  .dropdown-content a {
   padding: 0.7rem 1rem;
   font-style: italic;
-  text-indent: 4rem;
   font-size: 0.9rem;
 }
 
@@ -509,6 +509,7 @@ a:hover{
   align-content: center;
   background-color:#092424;
   text-transform: capitalize;
+  font-family: "Open Sans", sans-serif;
   font-size: 0.8rem;
   line-height: 1.7;
   font-weight: 150;

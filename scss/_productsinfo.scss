@@ -1,5 +1,6 @@
 
 //tablets, desktop and large screen
+
 .image-text-addButton{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -64,15 +65,10 @@
 }
 
 
-
-
-/// end preloader for products informations
-
-
 .modal_2 {
   display: none; 
   position: fixed;
-  z-index: 80;
+  z-index: 8888;
   left: 0;
   top: 0;
   width: 100%;
@@ -94,8 +90,6 @@
   width: 95%; /* Can adjust width */
   position: relative; /* To position close button */
   overflow: hidden; /* Prevent content overflow */
-
- 
   margin: 10% auto;
  
 }

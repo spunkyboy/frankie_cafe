@@ -26,6 +26,7 @@ html {
     padding: 5rem 0rem;
     line-height: 2;
     padding-left: 1rem;
+    margin-top: 7rem;
    
     p{
         text-transform: capitalize;
@@ -94,9 +95,31 @@ html {
     color: #050709;
     padding: 1rem;
    }
-   .fa-leaf{
-   display: block;
-   text-align: right;
+   .fa-solid{
+    display: grid;
+    justify-content: center;
+    font-family: "Open Sans", sans-serif;
+    float: right;
+    width: 5rem;
+    text-transform: uppercase;
+    margin: 0.4rem 0rem;
+    background-color:#141414;
+    color:#DBDBDB;
+    border: none; 
+    padding: 0.4rem 0rem;
+    font-size: 0.7rem; 
+    font-weight: 600;
+    cursor: pointer; 
+    border-radius: 0.4rem;
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+
+    &:hover{
+      background-color: #2a2929da; 
+      transform: translateY(-2px); 
+    }
+    &:active{
+      transform: translateY(2px);
+    }
  }
  .menu_product_5{
     padding: 0rem;
@@ -169,12 +192,35 @@ a:hover{
     font-family: "Open Sans", sans-serif;
     font-size: 1.2rem;
   }
+ }
+ .fa-solid{
+  display: grid;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+  float: right;
+  width: 5rem;
+  text-transform: uppercase;
+  margin: 0.4rem 0rem;
+  background-color:#141414;
+  color:#DBDBDB;
+  border: none; 
+  padding: 0.4rem 0rem;
+  font-size: 0.7rem; 
+  font-weight: 600;
+  cursor: pointer; 
+  border-radius: 0.4rem;
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+
+  &:hover{
+    background-color: #2a2929da; 
+    transform: translateY(-2px); 
+  }
+  &:active{
+    transform: translateY(2px);
+  }
 }
 }
-.fa-leaf{
- display: block;
- text-align: right;
-}
+
 
 .nutritionAlergen{
     display: grid;
@@ -202,7 +248,7 @@ a:hover{
   .modal {
     display: none; 
     position: fixed; 
-    z-index: 80; 
+    z-index: 9999; 
     top:0px;
     bottom:0px;
     left:0px;
