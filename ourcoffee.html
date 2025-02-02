@@ -32,12 +32,12 @@
 
   <body >
     
-    <header>
+    <header class="fixed-header">
       <nav>
     
         <div class="mobile_toggle">
            <div class="desktop_logo">
-              <a href="index.html">cafe frankie</a>
+              <a href="index.html">c-fkie</a>
            </div>
            <div>
               <a class="click_Icon" aria-label="Toggle navigation">&#9776;</a>
@@ -46,7 +46,7 @@
         <div>
         <ul class="nav-list">
           <li>
-             <a href="index.html" class="mobile_logo">cafe frankie</a>
+             <a href="index.html" class="mobile_logo">c-fkie</a>
           </li>
           <li class="right_Btn">
             <li class="dropdown">
@@ -64,7 +64,16 @@
                   <a href="ourstories.html">our stories</a>
               </div>
           </li>
-            <li><a href="shop.html">shop</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">shop</a>
+            <div class="dropdown-content">
+                <a href="javascript:void(0);" id="capsules-link">capsules</a>
+                <a href="javascript:void(0);" id="beans-link">beans & ground</a>
+                <a href="javascript:void(0);" id="gift-cards-link">gift cards & cups</a>
+                <a href="javascript:void(0);" id="gift-ideas-link">gift ideas</a>
+                <a href="javascript:void(0);" id="clearance-link">clearance</a>
+            </div>
+         </li>
             <li><a href="contactus.html">Contact</a></li>
         </ul>
       </div>
@@ -84,11 +93,12 @@
         <div class="image_overlaps">
           <figure>
             <img src="images/ourcoffee-1200.webp" 
-                  srcset="images/ourcoffee-800.webp 800w,
-                          images/ourcoffee-1200.webp 1200w,
-                          images/ourcoffee-1920.webp 1920w"
-                  class="overlap_image_1"  
-                  alt="our coffee about ">
+            srcset="images/ourcoffee-800.webp 800w, images/ourcoffee-1200.webp 1200w" 
+            sizes="(max-width: 800px) 100vw, 800px" 
+            class="overlap_image_1"  
+
+            alt="Our Coffee">
+       
           </figure>
         </div>
         <div class="remark_context"> 
@@ -190,5 +200,6 @@
         </footer>
    <script src="header.js" defer></script>
    <script src="preloader.js" defer></script>
+   <script src="shopdropBtn.js"></script>
   </body>
 </html>

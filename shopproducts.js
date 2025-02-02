@@ -28,6 +28,6 @@ window.onload = function() {
     preloaders.forEach(preloader => {
         preloader.style.display = 'none'; // Hide each preloader
     });
-}, 700);  // Adjust the timeout as needed (500ms for example)
+}, 500);  // Adjust the timeout as needed (500ms for example)
 };
 

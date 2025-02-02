@@ -52,16 +52,24 @@
         selectedSection.style.display = 'block';
       }
     }
+
+      document.addEventListener("DOMContentLoaded", function() {
+    // When the page loads, if there's a hash in the URL, show the section
+    const sectionId = window.location.hash.substring(1); // Get the part after #
+    if (sectionId) {
+      showSection(sectionId); 
+    }
+  });
      </script>
 </head>
 <body>
     
  <main>
-      <header>
+      <header class="fixed-header">
         <nav>
           <div class="mobile_toggle  shopproduct_toggle">
               <div class="desktop_logo">
-                  <a href="index.html">cafe frankie</a>
+                  <a href="index.html">c-fkie</a>
               </div>
                <div class="toggle-basket">
                   <div>
@@ -81,7 +89,7 @@
            <div>
           <ul class="nav-list">
             <li>
-               <a href="index.html" class="mobile_logo">cafe frankie</a>
+               <a href="index.html" class="mobile_logo">c-fkie</a>
             </li>
             <li class="right_Btn">
               <li class="dropdown">
@@ -99,7 +107,16 @@
                     <a href="ourstories.html">our stories</a>
                 </div>
             </li>
-              <li><a href="shop.html">shop</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropbtn">shop</a>
+              <div class="dropdown-content">
+                  <a href="javascript:void(0);" id="capsules-link">capsules</a>
+                  <a href="javascript:void(0);" id="beans-link">beans & ground</a>
+                  <a href="javascript:void(0);" id="gift-cards-link">gift cards & cups</a>
+                  <a href="javascript:void(0);" id="gift-ideas-link">gift ideas</a>
+                  <a href="javascript:void(0);" id="clearance-link">clearance</a>
+              </div>
+           </li>
               <li><a href="contactus.html">Contact</a></li>
 
           </ul>
@@ -145,14 +162,22 @@
                     
                           <label for="email">Email:</label><br>
                           <input type="email" id="email" name="email" placeholder="Enter your email" required class="filled-input" autocomplete="email"><br><br>
-                    
-                          <label for="address">Address:</label><br>
-                          <input type="text" id="address" name="address" placeholder="Enter your address" required class="filled-input" autocomplete="street-address"><br><br>
-    
-                          <label for="postcode">Postcode:</label><br>
-                          <input type="text" id="postcode" name="postcode" placeholder="Postcode" required class="filled-input"> <br><br>
-                          <p id="error"></p>
-                    
+                            
+                          <!-- Address Line 1 -->
+                          <input type="text" id="address" name="address" placeholder="Enter your address" 
+                          autocomplete="address-line1" required class="filled-input">
+
+                          <!-- City -->
+                          <input type="text" id="city" name="city" placeholder="City" 
+                          autocomplete="address-level2" required class="filled-input">
+                          <!-- ZIP Code -->
+                          <input type="text" id="postcode" name="postcode" placeholder="ZIP code" 
+                          autocomplete="postal-code" class="filled-input">
+
+                          <!-- Country -->
+                          <input type="text" id="country" name="country" placeholder="Country" 
+                          autocomplete="country" required class="filled-input">
+
                           <label for="phone">Phone:</label><br>
                           <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required class="filled-input"  autocomplete="tel"><br><br>
                     
@@ -913,7 +938,7 @@
     <script src="productsinfoloader.js" defer></script>
     <script src="shopproducts.js" defer></script>
     <script src="additems.js" defer></script>
-    
+    <script src="shopdropsamepage.js"></script>
    
 </body>
 </html>
