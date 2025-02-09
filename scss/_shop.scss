@@ -117,8 +117,6 @@ body{
     display: grid;
     gap: 1.5rem;
     width: 100%;
-    margin: 0;
-    padding: 0;
    
     img{
         height: 100%;
@@ -135,9 +133,10 @@ body{
         color: rgb(255, 255, 255);
     }
     .products_stage_Btn{
-        display: grid;
+        display: none;
         justify-content: space-between;
         text-align: center;
+        top: 0;
         left: 0;
         padding: 1.2rem 0rem;
         box-sizing: border-box;
