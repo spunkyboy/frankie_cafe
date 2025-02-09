@@ -139,7 +139,7 @@ body{
         justify-content: space-between;
         text-align: center;
         left: 0;
-        padding: 1.5rem 0rem;
+        padding: 1.2rem 0rem;
         box-sizing: border-box;
         width: 100%;       
         box-shadow: 1px 1px 5px 1px rgb(23, 22, 22);
@@ -158,9 +158,9 @@ body{
            border: none;
            border-radius: 0.2rem;
            padding: 0.2rem 0.4rem;
-           margin: 0rem 1rem;
+           margin: 0rem 0.6rem;
            transition: background-color 0.3s, color 0.3s;  /* Smooth transition for hover/focus */
-           line-height: 2;
+           line-height: 1.6;
            text-decoration: underline;
             
        }
